@@ -44,23 +44,23 @@ $font-family-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, mon
 // Update these values per client brand.
 
 // RD Hydrojet East San Diego — Brand Tokens
-$brand-warm-white:    #F4F2ED;    // Page background — warm, not sterile
+$brand-warm-white:    #FFFFFF;    // Page background — clean white
 $brand-white:         #FFFFFF;    // Card backgrounds
-$brand-dark:          #0F1923;    // Dark sections — pipeline dark
-$brand-dark-lighter:  #1A2836;    // Dark card variants, footer subsurface
-$brand-primary:       #1A7FC4;    // Action color — authoritative blue
-$brand-accent:        #D4722A;    // Accent — copper/pipe warmth
-$brand-surface:       #F5F7FA;    // Subtle off-white surfaces
-$footer-bg:           #0A1219;    // Footer — darkest
+$brand-dark:          #111111;    // Dark sections, header, footer (near-black)
+$brand-dark-lighter:  #1A1A1A;    // Subtle contrast against $brand-dark
+$brand-primary:       #D7262C;    // Action color — CTAs, links, icons, accents (red)
+$brand-accent:        #D7262C;    // Same as primary — unified red accent
+$brand-surface:       #F7F7F7;    // Subtle off-white surfaces
+$footer-bg:           #111111;    // Footer matches brand-dark
 
 // Text
-$text-primary:        #1A1A2E;    // Headings
-$text-secondary:      #64748B;    // Body text on light
-$text-on-dark:        #F4F2ED;    // Text on dark backgrounds
+$text-primary:        #111111;    // Headings — near-black
+$text-secondary:      #555555;    // Body text on light
+$text-on-dark:        #FFFFFF;    // Text on dark backgrounds
 
 // Borders + states
-$border-color:        #E2E8F0;
-$destructive:         #EF4444;
+$border-color:        #E5E5E5;
+$destructive:         #D7262C;
 $trust-green:         #22C55E;
 
 // Section padding
@@ -69,12 +69,12 @@ $section-padding-mobile:  48px;
 
 // Legacy aliases (map to brand tokens so downstream SCSS compiles unchanged)
 $bmg-obsidian:       $brand-dark;
-$bmg-charcoal:       #1C2632;
-$bmg-gunmetal:       #2C3E50;
+$bmg-charcoal:       $brand-dark-lighter;
+$bmg-gunmetal:       #2A2A2A;
 
 // Accent Colors
-$bmg-silver:         #A8A9AD;
-$bmg-platinum:       #E5E4E2;
+$bmg-silver:         #A8A8A8;
+$bmg-platinum:       #E5E5E5;
 
 // Support Colors
 $bmg-warm-gray:      #8B8B8B;
@@ -84,10 +84,10 @@ $bmg-white:          $brand-white;
 $bmg-off-white:      $brand-warm-white;
 $bmg-dark-gray:      #2D2D2D;
 $bmg-medium-gray:    #6B6B6B;
-$bmg-accent-light:   #E8E8E8;
+$bmg-accent-light:   $border-color;
 
 // Error State
-$bmg-error:          #8B4049;
+$bmg-error:          $destructive;
 
 // Set Bootstrap primary
 $primary: $bmg-obsidian;

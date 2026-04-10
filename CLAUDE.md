@@ -31,7 +31,7 @@ RD Hydrojet Plumbing's East San Diego County website — a conversion-optimized 
 
 The sister site at rdhydrojet.com serves the Inland Empire (Murrieta/Temecula). This site targets East San Diego County: El Cajon, La Mesa, Santee, Lakeside, Spring Valley, Lemon Grove, Rancho San Diego, Alpine, San Carlos, Del Cerro, College Area.
 
-**Design aesthetic:** "Underground Professional" — the visual confidence of infrastructure work meets clean modern service branding. Deep authoritative blue (#1A7FC4) as the action color, copper/pipe warmth (#D4722A) as accent, near-black (#0F1923) for dark sections. Plus Jakarta Sans for headlines and body, DM Serif Display for decorative founder section accents, JetBrains Mono for stats and metadata.
+**Design aesthetic:** "Underground Professional" — the visual confidence of infrastructure work meets clean modern service branding. Unified red (#D7262C) as the single action color for CTAs, links, icons, and accents; near-black (#111111) for dark sections, header, and footer; clean white (#FFFFFF) backgrounds. High-contrast red/black/white palette. Plus Jakarta Sans for headlines and body, DM Serif Display for decorative accents, JetBrains Mono for stats and metadata.
 
 **Target audience:** East San Diego County homeowners dealing with aging plumbing infrastructure (1960s-80s homes with cast iron and clay pipes), plus commercial property managers and landlords. High-intent searchers looking for hydro jetting, emergency plumbing, and drain cleaning services.
 
@@ -81,11 +81,12 @@ All values defined in `src/sass/theme/_theme_variables.scss` — single source o
 ### Colors
 | Token | Value | Usage |
 |-------|-------|-------|
-| `$brand-warm-white` | `#F4F2ED` | Page background |
+| `$brand-warm-white` | `#FFFFFF` | Page background |
 | `$brand-white` | `#FFFFFF` | Card backgrounds |
-| `$brand-dark` | `#0F1923` | Dark sections |
-| `$brand-primary` | `#1A7FC4` | CTAs, links, icons |
-| `$brand-accent` | `#D4722A` | Badges, highlights, urgency |
+| `$brand-dark` | `#111111` | Dark sections, header, footer (near-black) |
+| `$brand-dark-lighter` | `#1A1A1A` | Subtle contrast on dark surfaces |
+| `$brand-primary` | `#D7262C` | CTAs, links, icons, accents (red) |
+| `$brand-accent` | `#D7262C` | Unified red — same as primary |
 
 ### Typography
 | Token | Value | Usage |
