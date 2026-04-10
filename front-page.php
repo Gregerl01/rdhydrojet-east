@@ -1,13 +1,12 @@
 <?php
 /**
- * Front Page Template
+ * Front Page Template — RD Hydrojet East San Diego
  *
- * Homepage — section-based layout.
+ * Homepage — 8 sections, no pricing tier. See CLAUDE.md + CONTENT.md.
  *
- * @package starter-theme
+ * @package bmg-theme
  */
 
-// Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
 get_header();
@@ -16,25 +15,28 @@ get_header();
 <main id="main" class="site-main">
 
 	<?php
-	// Section 1: Hero — Full viewport, animated headline.
+	// Section 1: Hero + Lead Form + Stats.
 	get_template_part( 'template-parts/sections/section', 'hero' );
 
-	// Section 2: Explainer — Educational section.
-	get_template_part( 'template-parts/sections/section', 'explainer' );
+	// Section 2: Trust Strip — 4 icon badges.
+	get_template_part( 'template-parts/sections/section', 'trust-strip' );
 
-	// Section 3: Value Pillars — 4-column benefits.
-	get_template_part( 'template-parts/sections/section', 'pillars' );
+	// Section 3: Process — 3-step "How We Work".
+	get_template_part( 'template-parts/sections/section', 'process' );
 
-	// Section 4: Plans Overview — Three-tier cards.
-	get_template_part( 'template-parts/sections/section', 'plans-overview' );
+	// Section 4: Features — 6 plumbing service cards.
+	get_template_part( 'template-parts/sections/section', 'features' );
 
-	// Section 5: Provider Preview — Provider introduction.
-	get_template_part( 'template-parts/sections/section', 'physician-preview' );
+	// Section 5: Testimonials — 6 review cards + Google badge.
+	get_template_part( 'template-parts/sections/section', 'testimonials' );
 
-	// Section 6: FAQ Preview — Common questions accordion.
-	get_template_part( 'template-parts/sections/section', 'faq-preview' );
+	// Section 6: Gallery — Before/after hydrojet jobs.
+	get_template_part( 'template-parts/sections/section', 'gallery' );
 
-	// Section 7: CTA — Consultation prompt.
+	// Section 7: Service Areas — East County cities + pills.
+	get_template_part( 'template-parts/sections/section', 'service-areas' );
+
+	// Section 8: Final CTA — dark bg, form left, contact cards right.
 	get_template_part( 'template-parts/sections/section', 'cta' );
 	?>
 

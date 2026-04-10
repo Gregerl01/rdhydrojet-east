@@ -15,13 +15,37 @@ function bmg_theme_setup() {
 	// Load child theme text domain.
 	load_child_theme_textdomain( 'bmg-theme', get_stylesheet_directory() . '/languages' );
 
-	// WooCommerce support.
-	add_theme_support( 'woocommerce' );
-	add_theme_support( 'wc-product-gallery-zoom' );
-	add_theme_support( 'wc-product-gallery-lightbox' );
-	add_theme_support( 'wc-product-gallery-slider' );
+	// Register primary nav menu for header.
+	register_nav_menus(
+		array(
+			'primary' => __( 'Primary Menu', 'bmg-theme' ),
+		)
+	);
 }
 add_action( 'after_setup_theme', 'bmg_theme_setup' );
+
+/**
+ * Fallback primary navigation when no menu is assigned.
+ * Used by wp_nav_menu() in header.php.
+ */
+function bmg_nav_fallback() {
+	$items = array(
+		'Services'      => '#services',
+		'How It Works'  => '#process',
+		'Reviews'       => '#reviews',
+		'Service Areas' => '#service-areas',
+		'Contact'       => '#cta',
+	);
+	echo '<ul id="primary-menu" class="navbar-nav ms-auto me-3 align-items-lg-center">';
+	foreach ( $items as $label => $href ) {
+		printf(
+			'<li class="nav-item"><a class="nav-link" href="%s">%s</a></li>',
+			esc_url( $href ),
+			esc_html( $label )
+		);
+	}
+	echo '</ul>';
+}
 
 /**
  * WooCommerce: Remove default styles.

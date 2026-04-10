@@ -47,8 +47,25 @@ $font-family-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, mon
 $brand-warm-white:    #F4F2ED;    // Page background — warm, not sterile
 $brand-white:         #FFFFFF;    // Card backgrounds
 $brand-dark:          #0F1923;    // Dark sections — pipeline dark
+$brand-dark-lighter:  #1A2836;    // Dark card variants, footer subsurface
 $brand-primary:       #1A7FC4;    // Action color — authoritative blue
 $brand-accent:        #D4722A;    // Accent — copper/pipe warmth
+$brand-surface:       #F5F7FA;    // Subtle off-white surfaces
+$footer-bg:           #0A1219;    // Footer — darkest
+
+// Text
+$text-primary:        #1A1A2E;    // Headings
+$text-secondary:      #64748B;    // Body text on light
+$text-on-dark:        #F4F2ED;    // Text on dark backgrounds
+
+// Borders + states
+$border-color:        #E2E8F0;
+$destructive:         #EF4444;
+$trust-green:         #22C55E;
+
+// Section padding
+$section-padding-desktop: 96px;
+$section-padding-mobile:  48px;
 
 // Legacy aliases (map to brand tokens so downstream SCSS compiles unchanged)
 $bmg-obsidian:       $brand-dark;
@@ -199,12 +216,16 @@ $form-error: $bmg-error;
 // ==========================================================================
 // Button Tokens
 // ==========================================================================
-// Primary: Black bg, white text, square edges
-$btn-primary-bg: $bmg-obsidian;
-$btn-primary-text: $bmg-white;
-$btn-primary-hover-bg: $bmg-charcoal;
+// Primary: Dark bg, white text
+$btn-primary-bg: $brand-primary;
+$btn-primary-text: $brand-white;
+$btn-primary-hover-bg: darken($brand-primary, 8%);
 $btn-primary-padding-y: 1rem;    // 16px
 $btn-primary-padding-x: 2rem;    // 32px
+
+// Accent (gold/copper): Used for hero primary CTA
+$btn-accent-bg: $brand-accent;
+$btn-accent-text: $brand-white;
 
 // Secondary: Transparent bg, 1px black border
 $btn-secondary-bg: transparent;
