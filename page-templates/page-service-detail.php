@@ -8,7 +8,8 @@
  *
  * Slugs: hydro-jetting, drain-cleaning, water-heater-services,
  *        leak-detection, gas-line-repair, toilet-repair,
- *        emergency-plumbing, repiping, septic-sanitation
+ *        emergency-plumbing, repiping, septic-sanitation,
+ *        new-construction-plumbing
  *
  * @package bmg-theme
  */
@@ -205,6 +206,29 @@ $services = array(
 			array( 'q' => 'Will you cut holes in my walls?',                                 'a' => 'Yes, but minimally. We plan routing to use existing access points wherever possible. All access holes are patched, textured, and primed after the work — we do our own drywall repair so the finish matches.' ),
 			array( 'q' => 'How much does a repipe cost?',                                    'a' => 'Cost depends on home size, material choice, number of fixtures, and access complexity. Most residential repipes fall in a predictable range — we provide a firm written estimate after an in-home assessment.' ),
 			array( 'q' => 'Do I need a permit for a repipe?',                                'a' => 'Yes, and we pull it. All repipe work is permitted and inspected by the local building department. We handle every step of the permit and inspection process.' ),
+		),
+	),
+
+	'new-construction-plumbing' => array(
+		'title'       => 'New Construction Plumbing in East San Diego County',
+		'subtitle'    => 'Licensed rough-in, top-out, and trim plumbing for residential and commercial new builds across East County.',
+		'description' => '<p>RD Hydrojet Plumbing provides full-scope new construction plumbing for builders, general contractors, and property developers across East San Diego County. We handle every phase of the plumbing installation — from underground slab rough-in through top-out, pressure testing, and final fixture trim. Our work is built to pass inspection the first time.</p>
+<p>New construction plumbing isn\'t just about running pipes. It requires coordination with framers, concrete crews, and inspectors on a timeline that doesn\'t tolerate delays. We\'ve worked on single-family homes, multi-unit developments, and light commercial projects throughout the Inland Empire and East San Diego — and we understand the pace and precision that builders expect.</p>
+<p>Whether you\'re breaking ground on a custom home in Alpine, a tract development in El Cajon, or a commercial tenant improvement in La Mesa, our licensed team delivers code-compliant plumbing that\'s done right, on schedule, and documented for inspection. We carry C-36 Plumbing, C-42 Sanitation, and C-20 HVAC licenses — covering the full scope of mechanical systems for new builds.</p>',
+		'includes'    => array(
+			array( 'title' => 'Underground &amp; Slab Rough-In', 'desc' => 'Complete below-grade plumbing installation including waste lines, water supply, and gas piping before concrete is poured.' ),
+			array( 'title' => 'Top-Out &amp; In-Wall Rough',     'desc' => 'All vertical and horizontal pipe runs through framing — supply, drain, waste, and vent lines roughed to code and ready for inspection.' ),
+			array( 'title' => 'Pressure Testing &amp; Inspection', 'desc' => 'Full system pressure testing, leak checks, and documentation to ensure clean first-pass inspections with local building authorities.' ),
+			array( 'title' => 'Fixture Trim &amp; Final',        'desc' => 'Installation of all finish plumbing — faucets, toilets, water heaters, disposals, dishwasher connections, and hose bibs.' ),
+		),
+		'why'         => "New construction plumbing lives behind walls and under slabs for decades. If the rough-in isn't done right, the problems show up years later as slab leaks, failed joints, and code violations that complicate resale inspections. We build new construction plumbing systems with the same diagnostic mindset we bring to repairs — anticipating where failures happen and engineering them out. For general contractors and builders, we offer something that matters as much as quality: reliability. We show up on the day we're scheduled, coordinate with your framing and concrete crews without creating bottlenecks, pull our own permits, schedule our own inspections, and handle corrections on the spot. Our goal is to be the plumbing sub you never have to chase. East San Diego County is seeing significant residential development, particularly in El Cajon, Santee, and Lakeside, and new builds in this region need plumbing systems designed for the local water conditions — including hard water mitigation, proper venting for hillside lots, and sanitation system compliance for properties outside municipal sewer service areas.",
+		'faqs'        => array(
+			array( 'q' => 'What phases of new construction plumbing do you handle?',         'a' => 'We handle all phases: underground/slab rough-in, top-out (in-wall rough), pressure testing, inspection coordination, and final fixture trim. We can take the project from bare dirt to move-in ready.' ),
+			array( 'q' => 'Do you work with general contractors and builders?',              'a' => 'Yes. We partner with GCs, custom home builders, and developers across East San Diego County. We coordinate scheduling, pull our own permits, and handle inspections directly.' ),
+			array( 'q' => 'Do you pull permits for new construction plumbing?',              'a' => 'Yes. We pull all required plumbing permits and coordinate directly with San Diego County building inspectors. Our work is documented and built to pass inspection on the first visit.' ),
+			array( 'q' => 'What types of new construction projects do you take on?',         'a' => 'Single-family custom homes, tract housing developments, multi-family residential, and light commercial tenant improvements. We scale our crew to match the project scope.' ),
+			array( 'q' => 'Can you handle gas line rough-in for new construction?',          'a' => 'Yes. Our C-20 HVAC license covers gas line installation for water heaters, furnaces, cooktops, and other gas appliances as part of the new construction scope.' ),
+			array( 'q' => 'Do you work on new builds that need septic systems?',             'a' => 'Yes. Our C-42 Sanitation license covers septic system installation for properties outside municipal sewer service areas — common in Lakeside, Alpine, and rural East County. We handle the complete sanitation system as part of the new construction package.' ),
 		),
 	),
 

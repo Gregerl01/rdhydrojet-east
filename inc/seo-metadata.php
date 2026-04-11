@@ -71,6 +71,10 @@ function bmg_seo_page_data() {
 			'title'       => __( 'Septic &amp; Sanitation Services in East San Diego County | RD Hydrojet Plumbing', 'bmg-theme' ),
 			'description' => __( 'C-42 licensed septic system inspections, repairs, and installations. Serving Lakeside, Alpine, El Cajon & East County. Licensed CA #1076642. Call (951) 600-0459.', 'bmg-theme' ),
 		),
+		'page-service-detail:new-construction-plumbing' => array(
+			'title'       => __( 'New Construction Plumbing in East San Diego County | RD Hydrojet Plumbing', 'bmg-theme' ),
+			'description' => __( 'Licensed new construction plumbing for East San Diego County builders and homeowners. Rough-in, top-out, trim, and inspection. CA CSLB #1076642. Call (951) 600-0459.', 'bmg-theme' ),
+		),
 		'page-enroll'   => array(
 			'title'       => __( 'Enroll — [Business Name]', 'bmg-theme' ),
 			'description' => __( '[Enrollment page meta description — describe the enrollment process.]', 'bmg-theme' ),

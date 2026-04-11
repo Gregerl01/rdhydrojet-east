@@ -116,6 +116,17 @@ $services = array(
 		),
 		'icon'     => '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M8 6V4"/><path d="M16 6V4"/><circle cx="12" cy="16" r="1.5"/></svg>',
 	),
+	array(
+		'slug'     => 'new-construction-plumbing',
+		'title'    => __( 'New Construction Plumbing', 'bmg-theme' ),
+		'desc'     => __( 'Ground-up residential and commercial plumbing for new builds. From slab rough-in to final fixture trim, we handle every phase of new construction plumbing to code.', 'bmg-theme' ),
+		'bullets'  => array(
+			__( 'Slab rough-in &amp; underground', 'bmg-theme' ),
+			__( 'Top-out &amp; trim', 'bmg-theme' ),
+			__( 'Builder &amp; GC partnerships', 'bmg-theme' ),
+		),
+		'icon'     => '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 9h.01"/><path d="M15 9h.01"/><path d="M9 13h.01"/><path d="M15 13h.01"/></svg>',
+	),
 );
 
 // FAQ array.
