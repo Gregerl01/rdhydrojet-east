@@ -34,6 +34,43 @@ function bmg_seo_page_data() {
 			'title'       => __( 'Plumbing Services in East San Diego County | RD Hydrojet Plumbing', 'bmg-theme' ),
 			'description' => __( 'Full-service plumbing for East San Diego County. Hydro jetting, drain repair, water heaters, gas lines, emergency service. Licensed (CA #1076642). Call (951) 600-0459.', 'bmg-theme' ),
 		),
+		// Service detail pages — keyed by slug (basename page-service-detail + slug).
+		'page-service-detail:hydro-jetting' => array(
+			'title'       => __( 'Hydro Jetting in East San Diego County | RD Hydrojet Plumbing', 'bmg-theme' ),
+			'description' => __( 'Commercial-grade hydro jetting and drain cleaning. Serving El Cajon, La Mesa, Santee & East County. Licensed CA #1076642. Call (951) 600-0459.', 'bmg-theme' ),
+		),
+		'page-service-detail:drain-cleaning' => array(
+			'title'       => __( 'Drain &amp; Sewer Repair in East San Diego County | RD Hydrojet Plumbing', 'bmg-theme' ),
+			'description' => __( 'Camera-guided drain and sewer line repair. Serving El Cajon, La Mesa, Santee & East County. Licensed CA #1076642. Call (951) 600-0459.', 'bmg-theme' ),
+		),
+		'page-service-detail:water-heater-services' => array(
+			'title'       => __( 'Water Heater Services in East San Diego County | RD Hydrojet Plumbing', 'bmg-theme' ),
+			'description' => __( 'Tank and tankless water heater installation, repair, and replacement. Serving El Cajon, La Mesa, Santee & East County. Licensed CA #1076642. Call (951) 600-0459.', 'bmg-theme' ),
+		),
+		'page-service-detail:leak-detection' => array(
+			'title'       => __( 'Leak Detection in East San Diego County | RD Hydrojet Plumbing', 'bmg-theme' ),
+			'description' => __( 'Non-invasive electronic and thermal leak detection for slab and hidden pipe leaks. Serving El Cajon, La Mesa, Santee & East County. Licensed CA #1076642. Call (951) 600-0459.', 'bmg-theme' ),
+		),
+		'page-service-detail:gas-line-repair' => array(
+			'title'       => __( 'Gas Line Installation &amp; Repair in East San Diego County | RD Hydrojet Plumbing', 'bmg-theme' ),
+			'description' => __( 'Certified gas plumbers for installation, repair, and code inspection. Serving El Cajon, La Mesa, Santee & East County. Licensed CA #1076642. Call (951) 600-0459.', 'bmg-theme' ),
+		),
+		'page-service-detail:toilet-repair' => array(
+			'title'       => __( 'Toilet Repair &amp; Installation in East San Diego County | RD Hydrojet Plumbing', 'bmg-theme' ),
+			'description' => __( 'Running toilets, broken flanges, and full replacements. Serving El Cajon, La Mesa, Santee & East County. Licensed CA #1076642. Call (951) 600-0459.', 'bmg-theme' ),
+		),
+		'page-service-detail:emergency-plumbing' => array(
+			'title'       => __( '24/7 Emergency Plumber in East San Diego County | RD Hydrojet Plumbing', 'bmg-theme' ),
+			'description' => __( '24/7 emergency plumbing across East County. Burst pipes, sewer backups, gas leaks. Serving El Cajon, La Mesa, Santee & East County. Licensed CA #1076642. Call (951) 600-0459.', 'bmg-theme' ),
+		),
+		'page-service-detail:repiping' => array(
+			'title'       => __( 'Whole-Home Repiping in East San Diego County | RD Hydrojet Plumbing', 'bmg-theme' ),
+			'description' => __( 'Replace aging galvanized and polybutylene pipes with copper or PEX. Serving El Cajon, La Mesa, Santee & East County. Licensed CA #1076642. Call (951) 600-0459.', 'bmg-theme' ),
+		),
+		'page-service-detail:septic-sanitation' => array(
+			'title'       => __( 'Septic &amp; Sanitation Services in East San Diego County | RD Hydrojet Plumbing', 'bmg-theme' ),
+			'description' => __( 'C-42 licensed septic system inspections, repairs, and installations. Serving Lakeside, Alpine, El Cajon & East County. Licensed CA #1076642. Call (951) 600-0459.', 'bmg-theme' ),
+		),
 		'page-enroll'   => array(
 			'title'       => __( 'Enroll — [Business Name]', 'bmg-theme' ),
 			'description' => __( '[Enrollment page meta description — describe the enrollment process.]', 'bmg-theme' ),
@@ -72,6 +109,19 @@ function bmg_get_current_seo_key() {
 		if ( $template ) {
 			// Template slug is like "page-templates/page-about.php".
 			$basename = basename( $template, '.php' );
+
+			// Service detail pages share a template — key by slug for per-page SEO.
+			if ( 'page-service-detail' === $basename ) {
+				global $post;
+				if ( isset( $post->post_name ) && $post->post_name ) {
+					$composite = $basename . ':' . $post->post_name;
+					$map       = bmg_seo_page_data();
+					if ( isset( $map[ $composite ] ) ) {
+						return $composite;
+					}
+				}
+			}
+
 			return $basename;
 		}
 	}
