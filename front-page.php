@@ -2,7 +2,7 @@
 /**
  * Front Page Template — RD Hydrojet East San Diego
  *
- * Homepage — 8 sections, no pricing tier. See CLAUDE.md + CONTENT.md.
+ * Homepage — 8 sections. See CLAUDE.md + CONTENT.md.
  *
  * @package bmg-theme
  */
@@ -18,13 +18,10 @@ get_header();
 	// Section 1: Hero + Lead Form + Stats.
 	get_template_part( 'template-parts/sections/section', 'hero' );
 
-	// Section 2: Trust Strip — 4 icon badges.
-	get_template_part( 'template-parts/sections/section', 'trust-strip' );
-
-	// Section 3: Values Strip — dark bg, 4 icon tiles.
+	// Section 2: Values Strip — dark bg, 4 icon tiles.
 	get_template_part( 'template-parts/sections/section', 'values' );
 
-	// Section 4: Process — 3-step "How We Work".
+	// Section 3: Process — 3-step "How We Work".
 	get_template_part( 'template-parts/sections/section', 'process' );
 
 	// Section 4: Features — 6 plumbing service cards.
