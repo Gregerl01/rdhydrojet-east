@@ -416,14 +416,18 @@ get_header();
 	<section class="section-sd-why">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-lg-9 section-sd-why__content bmg-reveal text-center">
-					<span class="section-pill"><?php esc_html_e( 'WHY IT MATTERS', 'bmg-theme' ); ?></span>
-					<h2 class="section-title"><?php esc_html_e( 'Why East County Homeowners Need This', 'bmg-theme' ); ?></h2>
-					<p class="section-sd-why__text"><?php echo esc_html( $service['why'] ); ?></p>
-					<a href="tel:<?php echo esc_attr( $phone_link ); ?>" class="section-sd-why__phone">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-						<?php esc_html_e( 'Questions? Call', 'bmg-theme' ); ?> <?php echo esc_html( $phone_display ); ?>
-					</a>
+				<div class="col-lg-10 section-sd-why__content bmg-reveal">
+					<div class="text-center">
+						<span class="section-pill"><?php esc_html_e( 'WHY IT MATTERS', 'bmg-theme' ); ?></span>
+						<h2 class="section-title"><?php esc_html_e( 'Why East County Homeowners Need This', 'bmg-theme' ); ?></h2>
+					</div>
+					<p class="section-sd-why__text text-start"><?php echo esc_html( $service['why'] ); ?></p>
+					<div class="text-center">
+						<a href="tel:<?php echo esc_attr( $phone_link ); ?>" class="section-sd-why__phone">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+							<?php esc_html_e( 'Questions? Call', 'bmg-theme' ); ?> <?php echo esc_html( $phone_display ); ?>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
