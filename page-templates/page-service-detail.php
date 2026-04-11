@@ -16,7 +16,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$phone_display = get_theme_mod( 'bmg_phone', '(951) 600-0459' );
+$phone_display = get_theme_mod( 'bmg_phone', '(619) 571-1777' );
 $phone_link    = preg_replace( '/[^0-9+]/', '', $phone_display );
 $email         = get_theme_mod( 'bmg_email', 'info@rdhydrojeteast.com' );
 
@@ -168,7 +168,7 @@ $services = array(
 		'subtitle'    => 'Burst pipes, sewer backups, gas leaks, water heater failures — we answer the phone day and night.',
 		'description' => '<p>Plumbing emergencies don\'t wait for business hours. A burst pipe at 2 AM, a sewer backup during a dinner party, a gas leak on a holiday weekend — when something goes seriously wrong, you need a plumber who answers the phone and shows up fast. We offer 24/7 emergency service across all of East San Diego County: El Cajon, La Mesa, Santee, Lakeside, Spring Valley, Lemon Grove, Rancho San Diego, Alpine, and surrounding communities.</p>
 <p>Our emergency response goal is under 60 minutes to your door in most parts of East County. We carry common repair parts on every truck — shut-off valves, common fittings, wax seals, flappers, pressure tanks — so most emergencies can be resolved in a single visit. For major issues like full sewer line failures or whole-home flooding, we triage on-site and give you a clear plan.</p>
-<p>If you\'re calling us in an emergency: stay calm, shut off the main water valve if water is involved, turn off the gas at the meter if gas is involved, and call us at (951) 600-0459. We\'ll talk you through what to do while we\'re en route.</p>',
+<p>If you\'re calling us in an emergency: stay calm, shut off the main water valve if water is involved, turn off the gas at the meter if gas is involved, and call us at (619) 571-1777. We\'ll talk you through what to do while we\'re en route.</p>',
 		'includes'    => array(
 			array( 'title' => 'Immediate Phone Response',    'desc' => '24/7 live answering. No voicemail, no call queue. You reach a real person who dispatches the nearest technician.' ),
 			array( 'title' => 'Rapid On-Site Arrival',       'desc' => '60-minute response goal across most of East County. Faster in our primary coverage zone.' ),

@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$phone_display = get_theme_mod( 'bmg_phone', '(951) 600-0459' );
+$phone_display = get_theme_mod( 'bmg_phone', '(619) 571-1777' );
 $phone_link    = preg_replace( '/[^0-9+]/', '', $phone_display );
 
 // Build primary areas from Customizer (up to 6 slots).

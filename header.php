@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$phone_display = get_theme_mod( 'bmg_phone', '(951) 600-0459' );
+$phone_display = get_theme_mod( 'bmg_phone', '(619) 571-1777' );
 $phone_link    = preg_replace( '/[^0-9+]/', '', $phone_display );
 $email         = get_theme_mod( 'bmg_email', 'info@rdhydrojeteast.com' );
 $utility_left  = get_theme_mod( 'bmg_utility_left', 'Serving East San Diego County' );

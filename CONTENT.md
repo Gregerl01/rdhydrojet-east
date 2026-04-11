@@ -3,7 +3,7 @@
 **Document type:** Production content architecture, mapped to template files
 **Brand voice:** Direct, experienced, no-nonsense. Like talking to a knowledgeable neighbor who happens to be a master plumber.
 **Target audience:** East San Diego County homeowners and property managers with plumbing problems
-**Conversion goal:** Phone call (951-600-0459) or form submission for service booking
+**Conversion goal:** Phone call (619-571-1777) or form submission for service booking
 **Owner:** RD Hydrojet Plumbing & Drain Inc. — 20+ years experience, CA CSLB #1076642
 
 ---
@@ -32,7 +32,7 @@
 **Subline:** `From hydro jetting to emergency repairs — 20+ years of trusted service across El Cajon, La Mesa, Santee, and all of East San Diego County.`
 **Proof snippet:** `★ 4.9 Rating · 75+ Reviews · CA Lic #1076642`
 **CTA Primary:** `Schedule Service →`
-**CTA Secondary:** `Call (951) 600-0459`
+**CTA Secondary:** `Call (619) 571-1777`
 **Trust strip logos:** Google Reviews · Yelp · BBB · CA CSLB
 
 ---
@@ -121,7 +121,7 @@
 **H2:** `Stop Living with Bad Plumbing`
 **Subline:** `Whether it's a slow drain or a full emergency, our East San Diego team is ready.`
 **CTA:** `Schedule Service Now →`
-**Phone fallback:** `or call (951) 600-0459`
+**Phone fallback:** `or call (619) 571-1777`
 **Microcopy:** `Free estimates. No obligation. Available 24/7.`
 
 ---
@@ -132,7 +132,7 @@
 |----------|-----|-------|
 | Business Name | (site title) | RD Hydrojet East |
 | Owner Name | `bmg_physician_name` | RD Hydrojet Plumbing |
-| Phone | `bmg_phone` | 951-600-0459 |
+| Phone | `bmg_phone` | 619-571-1777 |
 | Email | `bmg_email` | info@rdhydrojeteast.com |
 | Street | `bmg_address_street` | Service Area — East San Diego County |
 | City | `bmg_address_city` | San Diego, CA |

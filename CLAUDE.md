@@ -101,7 +101,7 @@ All values defined in `src/sass/theme/_theme_variables.scss` — single source o
 
 | Field | Key | Value |
 |-------|-----|-------|
-| Phone | `bmg_phone` | 951-600-0459 |
+| Phone | `bmg_phone` | 619-571-1777 |
 | Email | `bmg_email` | info@rdhydrojeteast.com |
 | Street | `bmg_address_street` | Service Area — East San Diego County |
 | City | `bmg_address_city` | San Diego, CA |
