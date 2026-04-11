@@ -146,6 +146,7 @@ $bmg_includes = array(
 	'/customizer-footer.php',        // Footer Customizer settings and menus.
 	'/customizer-hero.php',          // Hero section Customizer settings.
 	'/customizer-about.php',         // About section Customizer settings.
+	'/customizer-emergency.php',     // Emergency section (heading, 3 cards, CTA).
 	'/dark-mode.php',                // Dark mode FOUC prevention and data-bs-theme attribute.
 	'/seo-metadata.php',             // SEO title tags and meta descriptions.
 );

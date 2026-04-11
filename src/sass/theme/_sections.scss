@@ -1316,18 +1316,39 @@ select option {
     }
   }
 
-  &__placeholder {
+  &__media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
     background: #F5F5F5;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $brand-accent;
+  }
 
-    svg {
-      width: 64px;
-      height: 64px;
-    }
+  &__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__placeholder {
+    position: absolute;
+    inset: 0;
+    background: #F5F5F5;
+    // Subtle diagonal stripe hint that this is a placeholder
+    background-image: linear-gradient(
+      135deg,
+      #F5F5F5 25%,
+      #EEEEEE 25%,
+      #EEEEEE 50%,
+      #F5F5F5 50%,
+      #F5F5F5 75%,
+      #EEEEEE 75%,
+      #EEEEEE
+    );
+    background-size: 24px 24px;
   }
 
   &__body {

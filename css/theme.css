@@ -17463,17 +17463,28 @@ select option {
   box-shadow: 0 16px 48px rgba(17, 17, 17, 0.12);
   transform: translateY(-2px);
 }
-.section-emergency__placeholder {
+.section-emergency__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
   background: #F5F5F5;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #D7262C;
 }
-.section-emergency__placeholder svg {
-  width: 64px;
-  height: 64px;
+.section-emergency__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+}
+.section-emergency__placeholder {
+  position: absolute;
+  inset: 0;
+  background: #F5F5F5;
+  background-image: linear-gradient(135deg, #F5F5F5 25%, #EEEEEE 25%, #EEEEEE 50%, #F5F5F5 50%, #F5F5F5 75%, #EEEEEE 75%, #EEEEEE);
+  background-size: 24px 24px;
 }
 .section-emergency__body {
   padding: 2rem;
