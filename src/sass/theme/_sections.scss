@@ -770,7 +770,69 @@ select option {
 }
 
 // ==========================================================================
-// Section 3: Process
+// Section 3: Values Strip (dark bg, 4 icon tiles)
+// ==========================================================================
+
+.section-values {
+  background: $brand-dark;
+  color: $text-on-dark;
+  padding: 64px 0;
+
+  @media (max-width: 575.98px) {
+    padding: 56px 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 $space-xs;
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 3px solid $brand-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $space-md;
+    color: $brand-white;
+    background: transparent;
+    transition: border-color 200ms ease;
+
+    svg {
+      width: 32px;
+      height: 32px;
+      stroke: currentColor;
+    }
+  }
+
+  &__item:hover &__icon {
+    border-color: rgba(255, 255, 255, 1);
+    border-top-color: $brand-primary;
+  }
+
+  &__label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $brand-white;
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+
+  &__sub {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0;
+    line-height: 1.4;
+  }
+}
+
+// ==========================================================================
+// Section 4: Process
 // ==========================================================================
 
 .section-process {
