@@ -30,8 +30,8 @@ get_header();
 	// Section 5: Testimonials — 6 review cards + Google badge.
 	get_template_part( 'template-parts/sections/section', 'testimonials' );
 
-	// Section 6: Gallery — Before/after hydrojet jobs.
-	get_template_part( 'template-parts/sections/section', 'gallery' );
+	// Section 6: Emergency Plumbing — dark section, 3 cards, dual CTA.
+	get_template_part( 'template-parts/sections/section', 'emergency' );
 
 	// Section 7: Service Areas — East County cities + pills.
 	get_template_part( 'template-parts/sections/section', 'service-areas' );

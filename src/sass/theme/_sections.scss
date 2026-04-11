@@ -1288,11 +1288,12 @@ select option {
 }
 
 // ==========================================================================
-// Section 7: Before/After Gallery
+// Section 6: Emergency Plumbing (dark bg, 3 cards + dual CTA)
 // ==========================================================================
 
-.section-gallery {
-  background: $brand-white;
+.section-emergency {
+  background: $brand-dark;
+  color: $text-on-dark;
   padding: $section-padding-desktop 0;
 
   @media (max-width: 767.98px) {
@@ -1302,96 +1303,136 @@ select option {
   &__card {
     background: $brand-white;
     border-radius: $radius-lg;
-    border: 1px solid $border-color;
     overflow: hidden;
-    box-shadow: $shadow-sm;
+    box-shadow: $shadow-md;
     transition: box-shadow $transition-base, transform $transition-base;
     height: 100%;
     display: flex;
     flex-direction: column;
 
     &:hover {
-      box-shadow: $shadow-lg;
+      box-shadow: $shadow-xl;
       transform: translateY($hover-lift);
     }
   }
 
-  &__images {
-    display: flex;
-  }
-
-  &__img-wrap {
-    position: relative;
-    flex: 1;
-    overflow: hidden;
-  }
-
-  &__img {
-    width: 100%;
+  &__placeholder {
+    background: #F5F5F5;
     height: 200px;
-    object-fit: cover;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $brand-accent;
+
+    svg {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  &__body {
+    padding: $space-lg;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $text-primary;
+    margin-bottom: $space-sm;
+    line-height: 1.3;
+  }
+
+  &__desc {
+    font-size: 0.9375rem;
+    color: $text-secondary;
+    line-height: 1.55;
+    margin-bottom: 0;
+  }
+
+  // Bottom CTA
+  &__cta {
+    margin-top: $space-3xl;
+
+    @media (max-width: 767.98px) {
+      margin-top: $space-2xl;
+    }
+  }
+
+  &__cta-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $brand-white;
+    margin-bottom: $space-lg;
+    line-height: 1.4;
 
     @media (min-width: 768px) {
-      height: 220px;
+      font-size: 1.5rem;
     }
   }
 
-  // Only real images (with .js-gallery-img) get the clickable cursor
-  .js-gallery-img {
-    cursor: pointer;
-    transition: transform $transition-base;
+  &__cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-md;
+    justify-content: center;
 
-    &:hover {
-      transform: scale(1.03);
+    @media (max-width: 575.98px) {
+      flex-direction: column;
+      align-items: stretch;
+
+      .section-emergency__btn {
+        width: 100%;
+        justify-content: center;
+      }
     }
   }
 
-  &__badge {
-    position: absolute;
-    bottom: $space-xs;
-    left: $space-xs;
-    padding: 3px $space-xs;
-    font-size: 0.625rem;
-    font-weight: 700;
-    font-family: $font-family-mono;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    border-radius: $radius-sm;
-    color: $brand-white;
-    line-height: 1;
-
-    &--before {
-      background: $destructive;
-    }
-
-    &--after {
-      background: $trust-green;
-    }
-  }
-
-  &__label {
-    padding: $space-sm $space-md;
-    margin-bottom: 0;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: $text-primary;
-    border-top: 1px solid $border-color;
-    margin-top: auto;
-  }
-
-  &__more-link {
+  &__btn {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    color: $brand-primary;
-    font-weight: 600;
+    gap: $space-xs;
+    padding: 0.875rem 1.75rem;
+    border-radius: $radius-button;
+    font-weight: 700;
+    font-size: 1rem;
     text-decoration: none;
-    transition: gap $transition-fast;
+    border: 2px solid transparent;
+    transition: background $transition-base, color $transition-base, border-color $transition-base, transform $transition-fast;
+    line-height: 1.2;
 
-    &:hover {
-      gap: $space-xs;
-      color: $btn-primary-hover-bg;
+    svg {
+      flex-shrink: 0;
+    }
+
+    &--call {
+      background: $brand-white;
+      color: $brand-dark;
+      border-color: $brand-white;
+
+      &:hover {
+        background: transparent;
+        color: $brand-white;
+        border-color: $brand-white;
+        transform: translateY($hover-lift);
+      }
+    }
+
+    &--book {
+      background: $brand-primary;
+      color: $brand-white;
+      border-color: $brand-primary;
+
+      &:hover {
+        background: darken($brand-primary, 8%);
+        border-color: darken($brand-primary, 8%);
+        color: $brand-white;
+        transform: translateY($hover-lift);
+      }
     }
   }
 }
