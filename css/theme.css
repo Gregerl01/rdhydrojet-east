@@ -18302,11 +18302,17 @@ select option {
   overflow: hidden;
   background: #F5F5F5;
 }
-.section-sd-overview__image {
-  width: 100%;
-  height: 100%;
+.section-sd-overview__image, .section-sd-overview__image-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none;
+  max-height: none;
   -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
   display: block;
 }
 .section-sd-overview__image-placeholder {
