@@ -2310,40 +2310,40 @@ select option {
   }
 
   &__image-wrap {
-    aspect-ratio: 4 / 3;
-    border-radius: $radius-lg;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
     overflow: hidden;
+    background: #F5F5F5;
   }
 
   &__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: $radius-lg;
+    display: block;
   }
 
   &__image-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: $space-sm;
-    width: 100%;
-    height: 100%;
-    min-height: 320px;
-    background: $brand-surface;
-    border: 2px dashed $border-color;
-    border-radius: $radius-lg;
-    color: $text-secondary;
-
-    span {
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
+    position: absolute;
+    inset: 0;
+    background: #F5F5F5;
+    background-image: linear-gradient(
+      135deg,
+      #F5F5F5 25%,
+      #EEEEEE 25%,
+      #EEEEEE 50%,
+      #F5F5F5 50%,
+      #F5F5F5 75%,
+      #EEEEEE 75%,
+      #EEEEEE
+    );
+    background-size: 24px 24px;
   }
 }
 
-// What's Included
+// What's Included — full-width 4-col centered card grid
 .section-sd-includes {
   background: $brand-surface;
   padding: $section-padding-desktop 0;
@@ -2354,18 +2354,22 @@ select option {
 
   &__card {
     display: flex;
-    gap: $space-md;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $space-sm;
     background: $brand-white;
-    border-radius: $radius-lg;
-    padding: $space-lg;
+    border-radius: 12px;
+    padding: $space-md;
     height: 100%;
     border: 1px solid $border-color;
-    transition: box-shadow $transition-base, transform $transition-base;
+    text-align: left;
+    transition: box-shadow $transition-base, transform $transition-base, border-color $transition-base;
 
     @media (hover: hover) {
       &:hover {
         box-shadow: $shadow-md;
         transform: translateY($hover-lift);
+        border-color: rgba($brand-primary, 0.25);
       }
     }
   }
@@ -2374,25 +2378,27 @@ select option {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
-    min-width: 56px;
-    border-radius: 14px;
-    background: #E8F6FC;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: $radius-full;
+    background: rgba($brand-primary, 0.1);
     color: $brand-primary;
-  }
-
-  &__title {
-    font-size: 1.0625rem;
-    font-weight: 700;
-    color: $text-primary;
     margin-bottom: 4px;
   }
 
+  &__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $text-primary;
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+
   &__desc {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     color: $text-secondary;
-    line-height: 1.6;
+    line-height: 1.55;
     margin-bottom: 0;
   }
 }

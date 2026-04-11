@@ -332,37 +332,58 @@ get_header();
 		</div>
 	</section>
 
-	<!-- Section 2: Overview + What's Included (60/40 two-col) -->
+	<!-- Section 2: About This Service (text left / image right) -->
 	<section class="section-sd-overview">
 		<div class="container">
-			<div class="row align-items-start gy-5">
-				<div class="col-lg-7 bmg-reveal">
+			<div class="row align-items-center gy-5">
+				<div class="col-lg-6 bmg-reveal">
 					<span class="section-pill"><?php esc_html_e( 'ABOUT THIS SERVICE', 'bmg-theme' ); ?></span>
 					<div class="section-sd-overview__text">
 						<?php echo wp_kses_post( $service['description'] ); ?>
 					</div>
 				</div>
 
-				<div class="col-lg-5 bmg-reveal">
-					<div class="section-sd-includes__wrap">
-						<span class="section-pill"><?php esc_html_e( "WHAT'S INCLUDED", 'bmg-theme' ); ?></span>
-						<div class="row g-3">
-							<?php foreach ( $service['includes'] as $item ) : ?>
-								<div class="col-sm-6">
-									<div class="section-sd-includes__card">
-										<div class="section-sd-includes__icon" aria-hidden="true">
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-										</div>
-										<div>
-											<h3 class="section-sd-includes__title"><?php echo wp_kses_post( $item['title'] ); ?></h3>
-											<p class="section-sd-includes__desc"><?php echo esc_html( $item['desc'] ); ?></p>
-										</div>
-									</div>
-								</div>
-							<?php endforeach; ?>
-						</div>
+				<div class="col-lg-6 bmg-reveal">
+					<div class="section-sd-overview__image-wrap">
+						<?php if ( has_post_thumbnail() ) : ?>
+							<?php
+							the_post_thumbnail(
+								'large',
+								array(
+									'class'   => 'section-sd-overview__image',
+									'alt'     => esc_attr( wp_strip_all_tags( html_entity_decode( $service['title'] ) ) ),
+									'loading' => 'lazy',
+								)
+							);
+							?>
+						<?php else : ?>
+							<div class="section-sd-overview__image-placeholder" aria-hidden="true"></div>
+						<?php endif; ?>
 					</div>
 				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section 3: What's Included (full-width, 4-col grid) -->
+	<section class="section-sd-includes">
+		<div class="container">
+			<div class="text-center mb-5 bmg-reveal">
+				<span class="section-pill"><?php esc_html_e( "WHAT'S INCLUDED", 'bmg-theme' ); ?></span>
+				<h2 class="section-title"><?php esc_html_e( 'What You Get', 'bmg-theme' ); ?></h2>
+			</div>
+			<div class="row g-4 bmg-reveal-stagger">
+				<?php foreach ( $service['includes'] as $item ) : ?>
+					<div class="col-6 col-lg-3 bmg-reveal">
+						<div class="section-sd-includes__card">
+							<div class="section-sd-includes__icon" aria-hidden="true">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+							</div>
+							<h3 class="section-sd-includes__title"><?php echo wp_kses_post( $item['title'] ); ?></h3>
+							<p class="section-sd-includes__desc"><?php echo esc_html( $item['desc'] ); ?></p>
+						</div>
+					</div>
+				<?php endforeach; ?>
 			</div>
 		</div>
 	</section>
