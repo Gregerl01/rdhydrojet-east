@@ -23,8 +23,8 @@ function bmg_seo_page_data() {
 			'description' => __( '[Homepage meta description — summarize services, location, and value proposition.]', 'bmg-theme' ),
 		),
 		'page-about'    => array(
-			'title'       => __( 'About — [Business Name]', 'bmg-theme' ),
-			'description' => __( '[About page meta description — introduce the provider or team and their qualifications.]', 'bmg-theme' ),
+			'title'       => __( 'About RD Hydrojet Plumbing | Licensed East San Diego Plumber Since 2003', 'bmg-theme' ),
+			'description' => __( 'Licensed plumbing and hydro jetting for East San Diego County. Serving El Cajon, La Mesa, Santee, and all of East County since 2003. CA CSLB #1076642.', 'bmg-theme' ),
 		),
 		'page-plans'    => array(
 			'title'       => __( 'Plans — [Business Name]', 'bmg-theme' ),
