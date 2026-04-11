@@ -810,7 +810,7 @@ select option {
     width: 80px;
     height: 80px;
     border-radius: 16px;
-    background-color: #E8F6FC;
+    background-color: rgba($brand-accent, 0.12);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -822,16 +822,16 @@ select option {
     svg {
       width: 32px;
       height: 32px;
-      color: #2AABE2;
+      color: $brand-accent;
       transition: color 300ms ease;
     }
   }
 
   &__step:hover &__icon-wrap {
-    background-color: #2AABE2;
+    background-color: $brand-accent;
 
     svg {
-      color: #FFFFFF;
+      color: $brand-white;
     }
   }
 
@@ -842,16 +842,18 @@ select option {
     width: 28px;
     height: 28px;
     border-radius: $radius-full;
-    background: $brand-primary;
+    background: $brand-accent;
     color: $brand-white;
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     font-weight: 800;
-    font-family: $font-family-mono;
+    font-family: $font-family-base;
+    font-variant-numeric: lining-nums tabular-nums;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 3px solid $brand-white;
     z-index: 2;
+    line-height: 1;
   }
 
   &__step-title {

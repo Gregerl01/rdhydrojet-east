@@ -17026,7 +17026,7 @@ select option {
   width: 80px;
   height: 80px;
   border-radius: 16px;
-  background-color: #E8F6FC;
+  background-color: rgba(215, 38, 44, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17038,11 +17038,11 @@ select option {
 .section-process__icon-wrap svg {
   width: 32px;
   height: 32px;
-  color: #2AABE2;
+  color: #D7262C;
   transition: color 300ms ease;
 }
 .section-process__step:hover .section-process__icon-wrap {
-  background-color: #2AABE2;
+  background-color: #D7262C;
 }
 .section-process__step:hover .section-process__icon-wrap svg {
   color: #FFFFFF;
@@ -17056,14 +17056,16 @@ select option {
   border-radius: 9999px;
   background: #D7262C;
   color: #FFFFFF;
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 800;
-  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family: "Plus Jakarta Sans", Arial, "Helvetica Neue", sans-serif;
+  font-variant-numeric: lining-nums tabular-nums;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 3px solid #FFFFFF;
   z-index: 2;
+  line-height: 1;
 }
 .section-process__step-title {
   font-size: 1.125rem;
