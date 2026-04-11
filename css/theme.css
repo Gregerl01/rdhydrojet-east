@@ -18408,6 +18408,52 @@ select option {
   color: rgb(171.6600790514, 30.3399209486, 35.1304347826);
 }
 
+.section-faq {
+  background: #F7F7F7;
+  padding: 96px 0;
+}
+@media (max-width: 767.98px) {
+  .section-faq {
+    padding: 48px 0;
+  }
+}
+.section-faq__accordion .accordion-item {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 12px !important;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.section-faq__accordion .accordion-item:last-child {
+  margin-bottom: 0;
+}
+.section-faq__accordion .accordion-button {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111111;
+  background: #FFFFFF;
+  padding: 1.5rem 2rem;
+  box-shadow: none;
+}
+.section-faq__accordion .accordion-button:not(.collapsed) {
+  color: #D7262C;
+  background: #FFFFFF;
+  box-shadow: none;
+}
+.section-faq__accordion .accordion-button::after {
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.section-faq__accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: #E5E5E5;
+}
+.section-faq__accordion .accordion-body {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #555555;
+  padding: 0 2rem 1.5rem;
+}
+
 .section-sd-faq {
   background: #F7F7F7;
   padding: 96px 0;

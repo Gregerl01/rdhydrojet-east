@@ -2435,7 +2435,62 @@ select option {
   }
 }
 
-// FAQ
+// Homepage FAQ
+.section-faq {
+  background: $brand-surface;
+  padding: $section-padding-desktop 0;
+
+  @media (max-width: 767.98px) {
+    padding: $section-padding-mobile 0;
+  }
+
+  &__accordion {
+    .accordion-item {
+      background: $brand-white;
+      border: 1px solid $border-color;
+      border-radius: $radius-lg !important;
+      margin-bottom: $space-sm;
+      overflow: hidden;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .accordion-button {
+      font-size: 1rem;
+      font-weight: 600;
+      color: $text-primary;
+      background: $brand-white;
+      padding: $space-md $space-lg;
+      box-shadow: none;
+
+      &:not(.collapsed) {
+        color: $brand-primary;
+        background: $brand-white;
+        box-shadow: none;
+      }
+
+      &::after {
+        transition: transform $motion-moderate $ease-out-expo;
+      }
+
+      &:focus {
+        box-shadow: none;
+        border-color: $border-color;
+      }
+    }
+
+    .accordion-body {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: $text-secondary;
+      padding: 0 $space-lg $space-md;
+    }
+  }
+}
+
+// FAQ (service detail page)
 .section-sd-faq {
   background: $brand-surface;
   padding: $section-padding-desktop 0;
