@@ -36,6 +36,40 @@ function bmg_theme_footer_customizer( $wp_customize ) {
 	);
 
 	// ==========================================================================
+	// Branding Section
+	// ==========================================================================
+	$wp_customize->add_section(
+		'bmg_theme_footer_branding',
+		array(
+			'title'       => __( 'Footer Branding', 'bmg-theme' ),
+			'description' => __( 'Footer-specific logo for use on the dark footer background.', 'bmg-theme' ),
+			'panel'       => 'bmg_theme_footer_panel',
+			'priority'    => 5,
+		)
+	);
+
+	// Footer Logo (light/white version).
+	$wp_customize->add_setting(
+		'bmg_footer_logo',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'esc_url_raw',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'bmg_footer_logo',
+			array(
+				'label'       => __( 'Footer Logo (Light/White version)', 'bmg-theme' ),
+				'description' => __( 'Upload a white or light-colored version of your logo for the dark footer background. If left empty, the site title or main custom logo will be used.', 'bmg-theme' ),
+				'section'     => 'bmg_theme_footer_branding',
+			)
+		)
+	);
+
+	// ==========================================================================
 	// Practice Info Section
 	// ==========================================================================
 	$wp_customize->add_section(

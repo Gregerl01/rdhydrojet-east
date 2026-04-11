@@ -24,12 +24,16 @@ $footer_tagline = get_theme_mod( 'bmg_footer_tagline', "East San Diego County's 
 
 				<!-- Col 1: Company -->
 				<div class="col-lg-3 col-md-6">
-					<?php
-					$footer_logo_url = get_theme_mod( 'bmg_footer_logo', '' );
-					if ( $footer_logo_url ) : ?>
+					<?php $footer_logo_url = get_theme_mod( 'bmg_footer_logo', '' ); ?>
+					<?php if ( $footer_logo_url ) : ?>
 						<div class="site-footer__logo mb-3">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<img src="<?php echo esc_url( $footer_logo_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="site-footer__logo-img">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+								<img
+									src="<?php echo esc_url( $footer_logo_url ); ?>"
+									alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"
+									class="footer-logo site-footer__logo-img"
+									loading="lazy"
+								>
 							</a>
 						</div>
 					<?php elseif ( has_custom_logo() ) : ?>
@@ -38,8 +42,10 @@ $footer_tagline = get_theme_mod( 'bmg_footer_tagline', "East San Diego County's 
 						</div>
 					<?php else : ?>
 						<div class="site-footer__logo-text mb-3">
-							<span class="site-footer__logo-primary">RD Hydrojet</span>
-							<span class="site-footer__logo-secondary">EAST</span>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<span class="site-footer__logo-primary">RD Hydrojet</span>
+								<span class="site-footer__logo-secondary">EAST</span>
+							</a>
 						</div>
 					<?php endif; ?>
 
