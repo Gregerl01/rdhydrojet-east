@@ -31,8 +31,8 @@ function bmg_seo_page_data() {
 			'description' => __( '[Plans page meta description — summarize plan tiers and key benefits.]', 'bmg-theme' ),
 		),
 		'page-services' => array(
-			'title'       => __( 'Services — [Business Name]', 'bmg-theme' ),
-			'description' => __( '[Services page meta description — summarize core service offerings.]', 'bmg-theme' ),
+			'title'       => __( 'Plumbing Services in East San Diego County | RD Hydrojet Plumbing', 'bmg-theme' ),
+			'description' => __( 'Full-service plumbing for East San Diego County. Hydro jetting, drain repair, water heaters, gas lines, emergency service. Licensed (CA #1076642). Call (951) 600-0459.', 'bmg-theme' ),
 		),
 		'page-enroll'   => array(
 			'title'       => __( 'Enroll — [Business Name]', 'bmg-theme' ),
