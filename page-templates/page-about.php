@@ -49,6 +49,7 @@ $about_promise_p2   = get_theme_mod( 'about_promise_p2', $about_promise_p2_defau
 get_header();
 ?>
 
+<?php if ( ! class_exists( 'RankMath' ) && ! defined( 'WPSEO_VERSION' ) ) : ?>
 <!-- LocalBusiness Schema -->
 <script type="application/ld+json">
 {
@@ -90,6 +91,7 @@ get_header();
 	]
 }
 </script>
+<?php endif; ?>
 
 <main id="main" class="site-main">
 

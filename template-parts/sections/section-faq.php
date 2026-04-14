@@ -50,12 +50,14 @@ $faqs = array(
 <section id="faq" class="section-faq">
 	<div class="container">
 
-		<!-- Section Header -->
+		<!-- Section Header (hidden on standalone FAQ page where page provides its own H1) -->
+		<?php if ( ! is_page_template( 'page-templates/page-faq.php' ) ) : ?>
 		<div class="text-center mb-5 bmg-reveal">
 			<span class="section-pill">FAQ</span>
 			<h2 class="section-title">Frequently Asked Questions</h2>
 			<p class="section-sub">Quick answers to the questions we hear most often from East County homeowners and property managers.</p>
 		</div>
+		<?php endif; ?>
 
 		<!-- Accordion -->
 		<div class="row justify-content-center bmg-reveal">

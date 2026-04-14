@@ -48,7 +48,7 @@ $values = array(
 						<div class="section-values__icon" aria-hidden="true">
 							<?php echo $value['icon']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 						</div>
-						<h3 class="section-values__label"><?php echo wp_kses_post( $value['label'] ); ?></h3>
+						<p class="section-values__label"><?php echo wp_kses_post( $value['label'] ); ?></p>
 						<p class="section-values__sub"><?php echo esc_html( $value['sub'] ); ?></p>
 					</div>
 				</div>

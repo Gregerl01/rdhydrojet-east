@@ -55,9 +55,12 @@ $additional_areas = array_filter( array_map( 'trim', explode( "\n", $additional_
 		<?php if ( $primary_areas ) : ?>
 			<!-- Primary Area Cards -->
 			<div class="row gy-4 mb-4 bmg-reveal-stagger">
-				<?php foreach ( $primary_areas as $area ) : ?>
+				<?php foreach ( $primary_areas as $area ) :
+					$area_slug = sanitize_title( $area['name'] );
+					$area_url  = home_url( '/plumber-in-' . $area_slug . '/' );
+				?>
 					<div class="col-md-6 col-lg-3 bmg-reveal">
-						<div class="section-service-areas__card">
+						<a href="<?php echo esc_url( $area_url ); ?>" class="section-service-areas__card section-service-areas__card--link">
 							<div class="section-service-areas__card-header">
 								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
 							</div>
@@ -66,7 +69,7 @@ $additional_areas = array_filter( array_map( 'trim', explode( "\n", $additional_
 							<?php if ( $area['badge'] ) : ?>
 								<span class="section-service-areas__badge"><?php echo esc_html( $area['badge'] ); ?></span>
 							<?php endif; ?>
-						</div>
+						</a>
 					</div>
 				<?php endforeach; ?>
 			</div>
@@ -75,7 +78,7 @@ $additional_areas = array_filter( array_map( 'trim', explode( "\n", $additional_
 		<?php if ( $additional_areas ) : ?>
 			<!-- Additional Areas -->
 			<div class="section-service-areas__additional">
-				<h4 class="section-service-areas__additional-title">Additional Service Areas</h4>
+				<h3 class="section-service-areas__additional-title">Additional Service Areas</h3>
 				<div class="section-service-areas__pills">
 					<?php foreach ( $additional_areas as $area ) : ?>
 						<span class="section-service-areas__pill"><?php echo esc_html( $area ); ?></span>

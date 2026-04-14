@@ -55,10 +55,10 @@ $footer_tagline = get_theme_mod( 'bmg_footer_tagline', "East San Diego County's 
 
 					<!-- Social -->
 					<div class="site-footer__social">
-						<a href="#" aria-label="Facebook" class="site-footer__social-link">
+						<a href="https://www.facebook.com/rdhydrojet" aria-label="Facebook" class="site-footer__social-link" target="_blank" rel="noopener noreferrer">
 							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
 						</a>
-						<a href="#" aria-label="Instagram" class="site-footer__social-link">
+						<a href="https://www.instagram.com/rdhydrojet" aria-label="Instagram" class="site-footer__social-link" target="_blank" rel="noopener noreferrer">
 							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
 						</a>
 					</div>
@@ -66,7 +66,7 @@ $footer_tagline = get_theme_mod( 'bmg_footer_tagline', "East San Diego County's 
 
 				<!-- Col 2: Services -->
 				<div class="col-lg-3 col-md-6">
-					<h4 class="site-footer__title">Services</h4>
+					<strong class="site-footer__title">Services</strong>
 					<ul class="site-footer__links list-unstyled">
 						<li><a href="<?php echo esc_url( home_url( '/services/hydro-jetting/' ) ); ?>">Hydro Jetting</a></li>
 						<li><a href="<?php echo esc_url( home_url( '/services/drain-cleaning/' ) ); ?>">Drain &amp; Sewer Repair</a></li>
@@ -79,7 +79,7 @@ $footer_tagline = get_theme_mod( 'bmg_footer_tagline', "East San Diego County's 
 
 				<!-- Col 3: Service Areas -->
 				<div class="col-lg-3 col-md-6">
-					<h4 class="site-footer__title">Service Areas</h4>
+					<strong class="site-footer__title">Service Areas</strong>
 					<ul class="site-footer__links list-unstyled">
 						<li><a href="<?php echo esc_url( home_url( '/plumber-in-el-cajon/' ) ); ?>">El Cajon</a></li>
 						<li><a href="<?php echo esc_url( home_url( '/plumber-in-la-mesa/' ) ); ?>">La Mesa</a></li>
@@ -92,7 +92,7 @@ $footer_tagline = get_theme_mod( 'bmg_footer_tagline', "East San Diego County's 
 
 				<!-- Col 4: Contact -->
 				<div class="col-lg-3 col-md-6">
-					<h4 class="site-footer__title">Contact</h4>
+					<strong class="site-footer__title">Contact</strong>
 					<ul class="site-footer__contact list-unstyled">
 						<li>
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>

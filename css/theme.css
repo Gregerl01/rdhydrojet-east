@@ -17838,6 +17838,12 @@ select option {
   box-shadow: 0 4px 12px rgba(17, 17, 17, 0.06);
   transform: translateY(-2px);
 }
+.section-service-areas__card--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
 .section-service-areas__card-header {
   display: inline-flex;
   align-items: center;

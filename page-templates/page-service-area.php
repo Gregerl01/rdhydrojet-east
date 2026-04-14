@@ -637,6 +637,7 @@ $values = array(
 get_header();
 ?>
 
+<?php if ( ! class_exists( 'RankMath' ) && ! defined( 'WPSEO_VERSION' ) ) : ?>
 <!-- LocalBusiness + FAQPage Schema -->
 <script type="application/ld+json">
 {
@@ -688,6 +689,7 @@ get_header();
 	]
 }
 </script>
+<?php endif; ?>
 
 <main id="main" class="site-main">
 

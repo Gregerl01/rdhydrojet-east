@@ -70,6 +70,7 @@ $area_cities = array(
 get_header();
 ?>
 
+<?php if ( ! class_exists( 'RankMath' ) && ! defined( 'WPSEO_VERSION' ) ) : ?>
 <!-- Service + FAQPage Schema -->
 <script type="application/ld+json">
 {
@@ -149,6 +150,7 @@ get_header();
 	]
 }
 </script>
+<?php endif; ?>
 
 <main id="main" class="site-main">
 

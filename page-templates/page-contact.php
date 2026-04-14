@@ -38,6 +38,7 @@ $area_cities = array(
 get_header();
 ?>
 
+<?php if ( ! class_exists( 'RankMath' ) && ! defined( 'WPSEO_VERSION' ) ) : ?>
 <!-- LocalBusiness + ContactPoint Schema -->
 <script type="application/ld+json">
 {
@@ -65,6 +66,7 @@ get_header();
 	}
 }
 </script>
+<?php endif; ?>
 
 <main id="main" class="site-main">
 
@@ -90,7 +92,7 @@ get_header();
 				<!-- Left: Form (60%) -->
 				<div class="col-lg-7 bmg-reveal">
 					<div class="section-contact__form-card">
-						<h3 class="section-contact__form-title"><?php esc_html_e( 'Request Your Free Estimate', 'bmg-theme' ); ?></h3>
+						<h2 class="section-contact__form-title"><?php esc_html_e( 'Request Your Free Estimate', 'bmg-theme' ); ?></h2>
 
 						<form class="lead-form" method="post" action="#">
 							<div class="row gy-3">

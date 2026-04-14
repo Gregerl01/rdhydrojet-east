@@ -7,6 +7,11 @@
 
 defined( 'ABSPATH' ) || exit;
 
+// Prevent search engines from indexing the 404 page.
+add_action( 'wp_head', function() {
+	echo '<meta name="robots" content="noindex, nofollow">' . "\n";
+}, 1 );
+
 get_header();
 ?>
 

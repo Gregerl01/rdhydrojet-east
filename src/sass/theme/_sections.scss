@@ -1746,6 +1746,13 @@ select option {
       transform: translateY($hover-lift);
     }
 
+    &--link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
     &-header {
       display: inline-flex;
       align-items: center;
