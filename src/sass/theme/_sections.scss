@@ -4678,7 +4678,7 @@ select option {
 .section-blog-single {
 
   &__hero-image {
-    padding: 0 0 $space-xl;
+    padding: $space-xl 0;
     background: $brand-white;
 
     img {

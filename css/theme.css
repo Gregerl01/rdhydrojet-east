@@ -20394,7 +20394,7 @@ select option {
 }
 
 .section-blog-single__hero-image {
-  padding: 0 0 3rem;
+  padding: 3rem 0;
   background: #FFFFFF;
 }
 .section-blog-single__hero-image img {
