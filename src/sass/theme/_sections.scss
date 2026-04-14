@@ -1,5 +1,5 @@
 // ==========================================================================
-// Montana Pools — Homepage Sections
+// RD Hydrojet East San Diego — Homepage Sections
 // ==========================================================================
 // All values use tokens from _theme_variables.scss.
 // Bootstrap grid for layout. No hardcoded hex colors.
@@ -401,7 +401,7 @@
   }
 
   &:hover {
-    background: #E8F6FC;
+    background: rgba($brand-primary, 0.08);
     color: $brand-primary;
     border-color: $brand-primary;
   }
@@ -420,8 +420,8 @@
   transition: all 200ms ease;
 
   &:hover {
-    background: #1E8EBF;
-    border-color: #1E8EBF;
+    background: $btn-primary-hover-bg;
+    border-color: $btn-primary-hover-bg;
     color: $brand-white;
   }
 }
@@ -854,8 +854,8 @@ select option {
         content: '';
         position: absolute;
         top: 40px;
-        left: 12.5%;
-        right: 12.5%;
+        left: 16.67%;
+        right: 16.67%;
         height: 2px;
         background: $border-color;
         z-index: 0;
@@ -872,7 +872,7 @@ select option {
     width: 80px;
     height: 80px;
     border-radius: 16px;
-    background-color: #F5F5F5;
+    background-color: $brand-surface;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -951,13 +951,15 @@ select option {
     padding: $space-lg;
     height: 100%;
     border: 1px solid $border-color;
-    transition: box-shadow $transition-base, transform $transition-base;
+    border-bottom: 3px solid transparent;
+    transition: box-shadow $transition-base, transform $transition-base, border-bottom-color $transition-base;
     display: flex;
     flex-direction: column;
 
     &:hover {
       box-shadow: $shadow-md;
       transform: translateY($hover-lift);
+      border-bottom-color: $brand-primary;
     }
 
     &--accent {
@@ -1310,8 +1312,7 @@ select option {
 
     &-text {
       font-size: 0.9375rem;
-      font-style: italic;
-      color: $text-secondary;
+      color: $text-primary;
       line-height: 1.7;
       margin-bottom: $space-md;
       flex-grow: 1;
@@ -1339,8 +1340,8 @@ select option {
       width: auto;
       max-width: fit-content;
       align-self: flex-start;
-      background-color: #E8F6FC;
-      color: #2AABE2;
+      background-color: rgba($brand-primary, 0.08);
+      color: $brand-primary;
       font-size: 0.6875rem;
       font-weight: 600;
       padding: 2px 8px;
@@ -1382,6 +1383,7 @@ select option {
     background: $brand-white;
     border-radius: $radius-lg;
     overflow: hidden;
+    border-top: 3px solid $brand-primary;
     box-shadow: $shadow-md;
     transition: box-shadow $transition-base, transform $transition-base;
     height: 100%;
@@ -1399,7 +1401,7 @@ select option {
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-    background: #F5F5F5;
+    background: $brand-surface;
   }
 
   &__img {
@@ -1414,17 +1416,17 @@ select option {
   &__placeholder {
     position: absolute;
     inset: 0;
-    background: #F5F5F5;
+    background: $brand-surface;
     // Subtle diagonal stripe hint that this is a placeholder
     background-image: linear-gradient(
       135deg,
-      #F5F5F5 25%,
-      #EEEEEE 25%,
-      #EEEEEE 50%,
-      #F5F5F5 50%,
-      #F5F5F5 75%,
-      #EEEEEE 75%,
-      #EEEEEE
+      $brand-surface 25%,
+      darken($brand-surface, 3%) 25%,
+      darken($brand-surface, 3%) 50%,
+      $brand-surface 50%,
+      $brand-surface 75%,
+      darken($brand-surface, 3%) 75%,
+      darken($brand-surface, 3%)
     );
     background-size: 24px 24px;
   }
@@ -2467,7 +2469,7 @@ select option {
 
 // Homepage FAQ
 .section-faq {
-  background: $brand-surface;
+  background: $brand-white;
   padding: $section-padding-desktop 0;
 
   @media (max-width: 767.98px) {

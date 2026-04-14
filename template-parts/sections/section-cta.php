@@ -23,7 +23,7 @@ $office_hours  = get_theme_mod( 'bmg_office_hours', 'Mon-Fri: 7AM - 7PM' );
 		<!-- Section Header -->
 		<div class="text-center mb-5">
 			<h2 class="section-title text-white">Stop Living with Bad Plumbing</h2>
-			<p class="section-sub" style="color: rgba(244,242,237,0.8);">Whether it's a slow drain or a full emergency, our East San Diego team is ready. Free estimates, no obligation, available 24/7.</p>
+			<p class="section-sub text-white opacity-75">Whether it's a slow drain or a full emergency, our East San Diego team is ready. Free estimates, no obligation, available 24/7.</p>
 		</div>
 
 		<div class="row gy-4">

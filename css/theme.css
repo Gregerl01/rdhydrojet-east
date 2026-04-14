@@ -16495,7 +16495,7 @@ body {
   flex-shrink: 0;
 }
 .nav-btn-outline:hover {
-  background: #E8F6FC;
+  background: rgba(215, 38, 44, 0.08);
   color: #D7262C;
   border-color: #D7262C;
 }
@@ -16513,8 +16513,8 @@ body {
   transition: all 200ms ease;
 }
 .nav-btn-primary:hover {
-  background: #1E8EBF;
-  border-color: #1E8EBF;
+  background: rgb(180.3280632411, 31.8719367589, 36.9043478261);
+  border-color: rgb(180.3280632411, 31.8719367589, 36.9043478261);
   color: #FFFFFF;
 }
 
@@ -17064,8 +17064,8 @@ select option {
     content: "";
     position: absolute;
     top: 40px;
-    left: 12.5%;
-    right: 12.5%;
+    left: 16.67%;
+    right: 16.67%;
     height: 2px;
     background: #E5E5E5;
     z-index: 0;
@@ -17079,7 +17079,7 @@ select option {
   width: 80px;
   height: 80px;
   border-radius: 16px;
-  background-color: #F5F5F5;
+  background-color: #F7F7F7;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17148,13 +17148,15 @@ select option {
   padding: 2rem;
   height: 100%;
   border: 1px solid #E5E5E5;
-  transition: box-shadow 200ms ease, transform 200ms ease;
+  border-bottom: 3px solid transparent;
+  transition: box-shadow 200ms ease, transform 200ms ease, border-bottom-color 200ms ease;
   display: flex;
   flex-direction: column;
 }
 .section-features__card:hover {
   box-shadow: 0 4px 12px rgba(17, 17, 17, 0.06);
   transform: translateY(-2px);
+  border-bottom-color: #D7262C;
 }
 .section-features__card--accent {
   border-left: 3px solid #D7262C;
@@ -17457,8 +17459,7 @@ select option {
 }
 .section-testimonials__card-text {
   font-size: 0.9375rem;
-  font-style: italic;
-  color: #555555;
+  color: #111111;
   line-height: 1.7;
   margin-bottom: 1.5rem;
   flex-grow: 1;
@@ -17484,8 +17485,8 @@ select option {
   max-width: -moz-fit-content;
   max-width: fit-content;
   align-self: flex-start;
-  background-color: #E8F6FC;
-  color: #2AABE2;
+  background-color: rgba(215, 38, 44, 0.08);
+  color: #D7262C;
   font-size: 0.6875rem;
   font-weight: 600;
   padding: 2px 8px;
@@ -17520,6 +17521,7 @@ select option {
   background: #FFFFFF;
   border-radius: 12px;
   overflow: hidden;
+  border-top: 3px solid #D7262C;
   box-shadow: 0 4px 12px rgba(17, 17, 17, 0.06);
   transition: box-shadow 200ms ease, transform 200ms ease;
   height: 100%;
@@ -17535,7 +17537,7 @@ select option {
   width: 100%;
   aspect-ratio: 16/9;
   overflow: hidden;
-  background: #F5F5F5;
+  background: #F7F7F7;
 }
 .section-emergency__img {
   position: absolute;
@@ -17549,8 +17551,8 @@ select option {
 .section-emergency__placeholder {
   position: absolute;
   inset: 0;
-  background: #F5F5F5;
-  background-image: linear-gradient(135deg, #F5F5F5 25%, #EEEEEE 25%, #EEEEEE 50%, #F5F5F5 50%, #F5F5F5 75%, #EEEEEE 75%, #EEEEEE);
+  background: #F7F7F7;
+  background-image: linear-gradient(135deg, #F7F7F7 25%, rgb(239.35, 239.35, 239.35) 25%, rgb(239.35, 239.35, 239.35) 50%, #F7F7F7 50%, #F7F7F7 75%, rgb(239.35, 239.35, 239.35) 75%, rgb(239.35, 239.35, 239.35));
   background-size: 24px 24px;
 }
 .section-emergency__body {
@@ -18427,7 +18429,7 @@ select option {
 }
 
 .section-faq {
-  background: #F7F7F7;
+  background: #FFFFFF;
   padding: 96px 0;
 }
 @media (max-width: 767.98px) {
