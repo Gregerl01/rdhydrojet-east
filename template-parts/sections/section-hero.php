@@ -149,22 +149,30 @@ if ( $hero_bg_image ) {
 
 		<!-- Stats Bar -->
 		<div class="section-hero__stats">
-			<div class="row text-center">
-				<div class="col-6 col-md-3 section-hero__stat">
-					<span class="section-hero__stat-value">1,200+</span>
-					<span class="section-hero__stat-label">Jobs Completed</span>
+			<div class="row text-center g-3">
+				<div class="col-6 col-md-3">
+					<div class="section-hero__stat">
+						<span class="section-hero__stat-value">1,200+</span>
+						<span class="section-hero__stat-label">Jobs Completed</span>
+					</div>
 				</div>
-				<div class="col-6 col-md-3 section-hero__stat">
-					<span class="section-hero__stat-value">4.9&#9733;</span>
-					<span class="section-hero__stat-label">Average Rating</span>
+				<div class="col-6 col-md-3">
+					<div class="section-hero__stat">
+						<span class="section-hero__stat-value">4.9&#9733;</span>
+						<span class="section-hero__stat-label">Average Rating</span>
+					</div>
 				</div>
-				<div class="col-6 col-md-3 section-hero__stat">
-					<span class="section-hero__stat-value">20+</span>
-					<span class="section-hero__stat-label">Years Experience</span>
+				<div class="col-6 col-md-3">
+					<div class="section-hero__stat">
+						<span class="section-hero__stat-value">20+</span>
+						<span class="section-hero__stat-label">Years Experience</span>
+					</div>
 				</div>
-				<div class="col-6 col-md-3 section-hero__stat">
-					<span class="section-hero__stat-value">24/7</span>
-					<span class="section-hero__stat-label">Emergency Service</span>
+				<div class="col-6 col-md-3">
+					<div class="section-hero__stat">
+						<span class="section-hero__stat-value">24/7</span>
+						<span class="section-hero__stat-label">Emergency Service</span>
+					</div>
 				</div>
 			</div>
 		</div>

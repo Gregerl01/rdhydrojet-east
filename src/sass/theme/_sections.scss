@@ -635,17 +635,19 @@
   &__stats {
     margin-top: $space-xl;
     padding: $space-lg 0;
-    border-top: 1px solid rgba($brand-white, 0.12);
+    border-top: 2px solid $brand-primary;
     position: relative;
     z-index: 2;
   }
 
   &__stat {
+    background: rgba($brand-white, 0.06);
+    border-radius: $radius-md;
     padding: $space-sm 0;
 
     &-value {
       display: block;
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 800;
       color: $brand-white;
       font-family: $font-family-mono;
@@ -787,11 +789,12 @@ select option {
     flex-direction: column;
     align-items: center;
     padding: 0 $space-xs;
+    cursor: default;
   }
 
   &__icon {
-    width: 64px;
-    height: 64px;
+    width: 72px;
+    height: 72px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-top: 3px solid $brand-primary;
@@ -825,7 +828,7 @@ select option {
 
   &__sub {
     font-size: 0.8125rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 0;
     line-height: 1.4;
   }
@@ -970,12 +973,17 @@ select option {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 48px;
-      height: 48px;
+      width: 56px;
+      height: 56px;
       border-radius: $radius-lg;
-      background: rgba($brand-primary, 0.08);
+      background: rgba($brand-primary, 0.12);
       color: $brand-primary;
       margin-bottom: $space-sm;
+
+      svg {
+        width: 28px;
+        height: 28px;
+      }
     }
 
     &-title {
@@ -1029,18 +1037,23 @@ select option {
     }
   }
 
-  &__view-all {
+  &__view-all-btn {
     display: inline-flex;
     align-items: center;
     gap: $space-xs;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     color: $brand-primary;
+    background: transparent;
+    border: 2px solid $brand-primary;
+    border-radius: $radius-md;
+    padding: 12px $space-lg;
     text-decoration: none;
-    transition: gap $transition-fast;
+    transition: background $transition-base, color $transition-base, gap $transition-fast;
 
     &:hover {
-      color: $btn-primary-hover-bg;
+      background: $brand-primary;
+      color: $brand-white;
       gap: $space-sm;
     }
   }
@@ -1320,11 +1333,32 @@ select option {
       padding: 0;
     }
 
+    &-footer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: $brand-primary;
+      color: $brand-white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.875rem;
+      flex-shrink: 0;
+    }
+
     &-author {
-      margin-bottom: $space-xs;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
 
       strong {
-        display: block;
         font-size: 0.9375rem;
         color: $text-primary;
       }
@@ -1336,17 +1370,15 @@ select option {
     }
 
     &-tag {
+      margin-left: auto;
       display: inline-block;
-      width: auto;
-      max-width: fit-content;
-      align-self: flex-start;
+      white-space: nowrap;
       background-color: rgba($brand-primary, 0.08);
       color: $brand-primary;
       font-size: 0.6875rem;
       font-weight: 600;
       padding: 2px 8px;
       border-radius: 4px;
-      margin-top: 8px;
     }
   }
 
@@ -1417,18 +1449,10 @@ select option {
     position: absolute;
     inset: 0;
     background: $brand-surface;
-    // Subtle diagonal stripe hint that this is a placeholder
-    background-image: linear-gradient(
-      135deg,
-      $brand-surface 25%,
-      darken($brand-surface, 3%) 25%,
-      darken($brand-surface, 3%) 50%,
-      $brand-surface 50%,
-      $brand-surface 75%,
-      darken($brand-surface, 3%) 75%,
-      darken($brand-surface, 3%)
-    );
-    background-size: 24px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.15);
   }
 
   &__body {
@@ -1783,7 +1807,7 @@ select option {
   &__pill {
     display: inline-block;
     padding: 6px $space-sm;
-    background: $brand-surface;
+    background: $brand-white;
     color: $text-secondary;
     font-size: 0.8125rem;
     font-weight: 500;
@@ -2480,12 +2504,18 @@ select option {
     .accordion-item {
       background: $brand-white;
       border: 1px solid $border-color;
+      border-left: 3px solid transparent;
       border-radius: $radius-lg !important;
       margin-bottom: $space-sm;
       overflow: hidden;
+      transition: border-left-color 0.2s ease;
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      &:has(.accordion-button:not(.collapsed)) {
+        border-left-color: $brand-primary;
       }
     }
 
