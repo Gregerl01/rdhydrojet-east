@@ -4907,26 +4907,66 @@ select option {
   .gform_footer,
   .gform_page_footer {
     margin-top: $space-xs;
-    padding: 0;
+    padding: 0 !important;
 
     input[type="submit"],
-    button[type="submit"] {
+    button[type="submit"],
+    .gform_button {
       width: 100%;
-      padding: $btn-primary-padding-y $btn-primary-padding-x;
-      background: $btn-primary-bg;
-      color: $btn-primary-text;
-      border: none;
-      border-radius: $radius-button;
+      padding: 14px 24px !important;
+      background: $brand-primary !important;
+      color: $brand-white !important;
+      border: none !important;
+      border-radius: $radius-md;
       font-family: $font-family-base;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 1rem;
       cursor: pointer;
-      transition: background $transition-base, transform $transition-fast;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      line-height: 1.2;
 
       &:hover {
-        background: $btn-primary-hover-bg;
-        transform: translateY($hover-lift);
+        background: darken($brand-primary, 8%) !important;
       }
+
+      &:active {
+        transform: scale(0.98);
+      }
+
+      &:focus {
+        outline: 2px solid $brand-primary;
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  // Focus rings — override GF blue with brand red
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: $brand-primary !important;
+    box-shadow: 0 0 0 3px rgba($brand-primary, 0.12) !important;
+    outline: none;
+  }
+
+  // Progress bar (multi-page forms)
+  .gf_progressbar_percentage {
+    background: $brand-primary !important;
+  }
+
+  // Select field accent
+  .chosen-container .chosen-results li.highlighted {
+    background: $brand-primary !important;
+  }
+
+  // File upload button
+  .ginput_container_fileupload .gform_button_select_files {
+    background: $brand-primary !important;
+    color: $brand-white !important;
+    border: none !important;
+
+    &:hover {
+      background: darken($brand-primary, 8%) !important;
     }
   }
 
@@ -4992,5 +5032,24 @@ select option {
 
   .validation_message {
     color: lighten($brand-primary, 15%);
+  }
+}
+
+// Catch-all: override GF buttons regardless of wrapper version
+.gform_wrapper input[type="submit"],
+.gform_wrapper button[type="submit"],
+.gform_wrapper .gform_button {
+  background: $brand-primary !important;
+  color: $brand-white !important;
+  border: none !important;
+
+  &:hover {
+    background: darken($brand-primary, 8%) !important;
+  }
+
+  &:focus {
+    outline: 2px solid $brand-primary;
+    outline-offset: 2px;
+    box-shadow: none !important;
   }
 }
