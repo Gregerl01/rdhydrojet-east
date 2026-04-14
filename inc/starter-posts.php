@@ -45,9 +45,12 @@ function bmg_create_starter_posts() {
 		if ( $existing ) {
 			$category_ids[ $cat['category_nicename'] ] = $existing;
 		} else {
-			$id = wp_insert_category( $cat );
-			if ( $id && ! is_wp_error( $id ) ) {
-				$category_ids[ $cat['category_nicename'] ] = $id;
+			$result = wp_insert_term( $cat['cat_name'], 'category', array(
+				'slug'        => $cat['category_nicename'],
+				'description' => $cat['category_description'],
+			) );
+			if ( ! is_wp_error( $result ) ) {
+				$category_ids[ $cat['category_nicename'] ] = $result['term_id'];
 			}
 		}
 	}
@@ -321,4 +324,4 @@ HTML;
 	// Set flag so this only runs once.
 	update_option( 'bmg_starter_posts_created', true );
 }
-add_action( 'after_setup_theme', 'bmg_create_starter_posts' );
+add_action( 'init', 'bmg_create_starter_posts' );
