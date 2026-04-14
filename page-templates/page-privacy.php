@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Privacy Policy Page
+ * Template Name: Privacy Policy
  *
- * HIPAA Notice of Privacy Practices + Website Privacy Policy.
+ * Privacy Policy page for RD Hydrojet Plumbing & Drain Inc.
  *
  * @package starter-theme
  */
@@ -10,152 +10,110 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+// Noindex for legal pages.
+add_action( 'wp_head', function() {
+	echo '<meta name="robots" content="noindex, follow">' . "\n";
+}, 1 );
+
 // Dynamic variables.
-$effective_date = get_theme_mod( 'bmg_privacy_effective_date', '[Effective Date]' );
-$address_street = get_theme_mod( 'bmg_address_street', '[Street Address]' );
-$address_city   = get_theme_mod( 'bmg_address_city', '[City, State ZIP]' );
-$phone_display  = get_theme_mod( 'bmg_phone', '(000) 000-0000' );
-$phone_link     = preg_replace( '/[^0-9+]/', '', $phone_display );
-$email          = get_theme_mod( 'bmg_email', 'info@example.com' );
+$phone_display = get_theme_mod( 'bmg_phone', '(619) 571-1777' );
+$phone_link    = preg_replace( '/[^0-9+]/', '', $phone_display );
+$email         = get_theme_mod( 'bmg_email', 'info@rdhydrojeteast.com' );
 
 get_header();
 ?>
 
 <main id="main" class="site-main">
 
-	<!-- Page Header -->
-	<section class="section section-dark page-header">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-8 text-center">
-					<h1 class="display-text display-4 mb-3">
-						<?php esc_html_e( 'Privacy Policy & HIPAA Notice', 'bmg-theme' ); ?>
-					</h1>
-					<p class="text-muted small mb-0">
-						<?php
-						printf(
-							/* translators: %s: effective date */
-							esc_html__( 'Effective: %s', 'bmg-theme' ),
-							esc_html( $effective_date )
-						);
-						?>
-					</p>
-				</div>
-			</div>
+	<!-- Section 1: Hero -->
+	<section class="section-sd-hero section-dark">
+		<div class="section-sd-hero__bg" aria-hidden="true"></div>
+		<div class="container section-sd-hero__container">
+			<nav class="section-sd-hero__breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'bmg-theme' ); ?>">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'bmg-theme' ); ?></a>
+				<span aria-hidden="true">/</span>
+				<span><?php esc_html_e( 'Privacy Policy', 'bmg-theme' ); ?></span>
+			</nav>
+			<h1 class="section-sd-hero__title bmg-reveal"><?php esc_html_e( 'Privacy Policy', 'bmg-theme' ); ?></h1>
+			<p class="section-sd-hero__sub bmg-reveal"><?php esc_html_e( 'Your privacy matters. Here\'s how we handle your information.', 'bmg-theme' ); ?></p>
 		</div>
 	</section>
 
-	<!-- HIPAA Notice of Privacy Practices -->
-	<section class="section section-light reveal-on-scroll">
+	<!-- Section 2: Privacy Policy Content -->
+	<section class="section-legal bmg-reveal">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-lg-8">
-					<article class="legal-content">
+				<div class="col-lg-8 mx-auto">
 
-						<h2><?php esc_html_e( 'Notice of Privacy Practices — [Business Name]', 'bmg-theme' ); ?></h2>
+					<p class="section-legal__updated"><?php esc_html_e( 'Last Updated: April 2026', 'bmg-theme' ); ?></p>
 
-						<p><em><?php esc_html_e( 'This notice describes how medical information about you may be used and disclosed, and how you can access this information. Please review it carefully.', 'bmg-theme' ); ?></em></p>
+					<article class="section-legal__content">
 
-						<h3><?php esc_html_e( 'Our Responsibilities', 'bmg-theme' ); ?></h3>
+						<h2><?php esc_html_e( 'Information We Collect', 'bmg-theme' ); ?></h2>
 
-						<p><?php esc_html_e( 'We are required by law to maintain the privacy of your protected health information (PHI), provide you with this notice of our legal duties and privacy practices, and follow the terms of the notice currently in effect.', 'bmg-theme' ); ?></p>
+						<p><?php esc_html_e( 'We collect information you provide when requesting services or contacting us: your name, phone number, email address, and street address. This information is submitted voluntarily through our website contact forms.', 'bmg-theme' ); ?></p>
 
-						<h3><?php esc_html_e( 'How We Use and Disclose Your Health Information', 'bmg-theme' ); ?></h3>
+						<p><?php esc_html_e( 'Our website also automatically collects certain technical information when you visit, including your IP address, browser type, device information, and pages visited. This data is collected through cookies and analytics tools to help us understand how visitors use our site.', 'bmg-theme' ); ?></p>
 
-						<p><?php esc_html_e( 'We may use and disclose your PHI for the following purposes:', 'bmg-theme' ); ?></p>
+						<p><?php esc_html_e( 'We do not collect payment card information through our website. All payment processing occurs in person or through separate, secure payment systems.', 'bmg-theme' ); ?></p>
 
-						<p><strong><?php esc_html_e( 'Treatment', 'bmg-theme' ); ?></strong> — <?php esc_html_e( 'To provide, coordinate, and manage your medical care. This includes sharing information with specialists, laboratories, and other providers involved in your care.', 'bmg-theme' ); ?></p>
+						<h2><?php esc_html_e( 'How We Use Your Information', 'bmg-theme' ); ?></h2>
 
-						<p><strong><?php esc_html_e( 'Payment', 'bmg-theme' ); ?></strong> — <?php esc_html_e( 'To obtain reimbursement for services provided, including billing your insurance carrier and communicating with third-party payers.', 'bmg-theme' ); ?></p>
+						<p><?php esc_html_e( 'We use the information you provide to respond to service requests and provide estimates, schedule and coordinate plumbing services, communicate about upcoming or completed work, and improve our website and user experience.', 'bmg-theme' ); ?></p>
 
-						<p><strong><?php esc_html_e( 'Healthcare Operations', 'bmg-theme' ); ?></strong> — <?php esc_html_e( 'To support the business activities of the practice, including quality improvement, staff training, compliance auditing, and business management.', 'bmg-theme' ); ?></p>
+						<p><?php esc_html_e( 'We do not sell, rent, or trade your personal information to third parties. We may share your information with service providers who assist in operating our website, but only to the extent necessary to provide those services.', 'bmg-theme' ); ?></p>
 
-						<p><strong><?php esc_html_e( 'With Your Authorization', 'bmg-theme' ); ?></strong> — <?php esc_html_e( 'For purposes not described above, we will obtain your written authorization before using or disclosing your PHI. You may revoke authorization at any time in writing.', 'bmg-theme' ); ?></p>
+						<h2><?php esc_html_e( 'Cookies and Analytics', 'bmg-theme' ); ?></h2>
 
-						<h3><?php esc_html_e( 'Your Rights', 'bmg-theme' ); ?></h3>
+						<p><?php esc_html_e( 'Our website uses Google Analytics to analyze traffic patterns and user behavior. This helps us understand which pages are most useful and how visitors find our site. Google Analytics uses cookies to collect anonymous usage data.', 'bmg-theme' ); ?></p>
+
+						<p><?php esc_html_e( 'We use standard browser cookies to maintain basic site functionality such as form submissions and navigation preferences. We do not use third-party advertising cookies or tracking pixels.', 'bmg-theme' ); ?></p>
+
+						<p><?php esc_html_e( 'You can control cookie settings through your browser preferences. Disabling cookies may affect some website functionality but will not prevent you from viewing our content.', 'bmg-theme' ); ?></p>
+
+						<h2><?php esc_html_e( 'Third-Party Services', 'bmg-theme' ); ?></h2>
+
+						<p><?php esc_html_e( 'Our website integrates with the following third-party services:', 'bmg-theme' ); ?></p>
 
 						<ul>
-							<li><?php esc_html_e( 'Access and obtain a copy of your health records', 'bmg-theme' ); ?></li>
-							<li><?php esc_html_e( 'Request corrections to your health information', 'bmg-theme' ); ?></li>
-							<li><?php esc_html_e( 'Request restrictions on certain uses and disclosures', 'bmg-theme' ); ?></li>
-							<li><?php esc_html_e( 'Request confidential communications (e.g., contact at an alternate address or phone number)', 'bmg-theme' ); ?></li>
-							<li><?php esc_html_e( 'Receive an accounting of disclosures made for purposes other than treatment, payment, or operations', 'bmg-theme' ); ?></li>
-							<li><?php esc_html_e( 'Receive a paper copy of this notice upon request', 'bmg-theme' ); ?></li>
+							<li><?php esc_html_e( 'Google Analytics for website traffic analysis', 'bmg-theme' ); ?></li>
+							<li><?php esc_html_e( 'Google Maps for embedded maps on service area pages', 'bmg-theme' ); ?></li>
+							<li><?php esc_html_e( 'WordPress and associated plugins for website functionality', 'bmg-theme' ); ?></li>
 						</ul>
 
-						<h3><?php esc_html_e( 'Breach Notification', 'bmg-theme' ); ?></h3>
+						<p><?php esc_html_e( 'Links to external websites such as our Google Business Profile, Yelp listing, or the California Contractors State License Board are provided for your convenience. These sites operate under their own privacy policies, which we encourage you to review.', 'bmg-theme' ); ?></p>
 
-						<p><?php esc_html_e( 'We will notify you promptly if a breach of your unsecured PHI occurs, as required by federal law.', 'bmg-theme' ); ?></p>
+						<h2><?php esc_html_e( 'Data Security', 'bmg-theme' ); ?></h2>
 
-						<h3><?php esc_html_e( 'Contact', 'bmg-theme' ); ?></h3>
+						<p><?php esc_html_e( 'We use SSL encryption on all pages of our website to protect data transmitted between your browser and our servers. Form submissions are stored securely on our hosting provider\'s infrastructure with access limited to authorized personnel.', 'bmg-theme' ); ?></p>
 
-						<p><?php esc_html_e( 'To exercise any of these rights or to file a complaint, contact:', 'bmg-theme' ); ?></p>
+						<p><?php esc_html_e( 'While we take reasonable measures to protect your information, no method of electronic transmission or storage is completely secure. We cannot guarantee absolute security of your data.', 'bmg-theme' ); ?></p>
+
+						<h2><?php esc_html_e( 'Your Rights', 'bmg-theme' ); ?></h2>
+
+						<p><?php esc_html_e( 'You have the right to request access to the personal information we hold about you, request correction of inaccurate information, request deletion of your personal information, and opt out of any marketing communications.', 'bmg-theme' ); ?></p>
+
+						<p><?php esc_html_e( 'California residents have additional rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information is collected, the right to request deletion, and the right to non-discrimination for exercising privacy rights. We do not sell personal information as defined by the CCPA.', 'bmg-theme' ); ?></p>
+
+						<p><?php esc_html_e( 'To exercise any of these rights, contact us using the information below.', 'bmg-theme' ); ?></p>
+
+						<h2><?php esc_html_e( 'Contact Us About Privacy', 'bmg-theme' ); ?></h2>
+
+						<p><?php esc_html_e( 'If you have questions about this privacy policy or wish to exercise your privacy rights, contact us:', 'bmg-theme' ); ?></p>
 
 						<address class="privacy-contact-block">
-							<strong><?php esc_html_e( 'Privacy Officer', 'bmg-theme' ); ?></strong><br>
-							<?php esc_html_e( '[Business Name]', 'bmg-theme' ); ?><br>
-							<?php echo esc_html( $address_street ); ?><br>
-							<?php echo esc_html( $address_city ); ?><br>
-							<a href="tel:<?php echo esc_attr( $phone_link ); ?>"><?php echo esc_html( $phone_display ); ?></a><br>
-							<a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a>
+							<?php esc_html_e( 'Phone:', 'bmg-theme' ); ?> <a href="tel:<?php echo esc_attr( $phone_link ); ?>"><?php echo esc_html( $phone_display ); ?></a><br>
+							<?php esc_html_e( 'Email:', 'bmg-theme' ); ?> <a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a><br>
+							<strong><?php esc_html_e( 'RD Hydrojet Plumbing & Drain Inc.', 'bmg-theme' ); ?></strong><br>
+							<?php esc_html_e( 'East San Diego County, CA', 'bmg-theme' ); ?>
 						</address>
 
-						<p><?php esc_html_e( 'You may also file a complaint with the U.S. Department of Health and Human Services Office for Civil Rights.', 'bmg-theme' ); ?></p>
+						<h2><?php esc_html_e( 'Changes to This Policy', 'bmg-theme' ); ?></h2>
+
+						<p><?php esc_html_e( 'We may update this privacy policy periodically to reflect changes in our practices or applicable laws. When we make changes, we will update the "Last Updated" date at the top of this page. We encourage you to review this policy regularly.', 'bmg-theme' ); ?></p>
 
 					</article>
-				</div>
-			</div>
-		</div>
-	</section>
 
-	<!-- Website Privacy Policy -->
-	<section class="section section-light reveal-on-scroll">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-8">
-					<article class="legal-content">
-
-						<h2><?php esc_html_e( 'Website Privacy Policy', 'bmg-theme' ); ?></h2>
-
-						<h3><?php esc_html_e( 'Information We Collect', 'bmg-theme' ); ?></h3>
-
-						<p><?php esc_html_e( 'When you use this website, we may collect: your name, email address, phone number, and other information you voluntarily provide through forms. We also collect standard technical data such as browser type, IP address, and pages visited through cookies and server logs.', 'bmg-theme' ); ?></p>
-
-						<h3><?php esc_html_e( 'How We Use This Information', 'bmg-theme' ); ?></h3>
-
-						<p><?php esc_html_e( 'Information submitted through website forms is used to respond to your inquiry or process your enrollment application. Technical data is used to maintain site security, improve performance, and understand usage patterns.', 'bmg-theme' ); ?></p>
-
-						<h3><?php esc_html_e( 'Third-Party Services', 'bmg-theme' ); ?></h3>
-
-						<p><?php esc_html_e( 'This website uses the following third-party services that may collect data in accordance with their own privacy policies:', 'bmg-theme' ); ?></p>
-
-						<ul>
-							<li><?php esc_html_e( 'Payment processing: Authorize.net (PCI-DSS compliant)', 'bmg-theme' ); ?></li>
-							<li><?php esc_html_e( 'Form handling: Gravity Forms (data stored on-site)', 'bmg-theme' ); ?></li>
-						</ul>
-
-						<h3><?php esc_html_e( 'Data Security', 'bmg-theme' ); ?></h3>
-
-						<p><?php esc_html_e( 'All data transmitted through this website is encrypted via TLS (HTTPS). Form submissions containing personal information are stored in encrypted databases with access restricted to authorized personnel.', 'bmg-theme' ); ?></p>
-
-						<h3><?php esc_html_e( 'Your Choices', 'bmg-theme' ); ?></h3>
-
-						<p>
-							<?php
-							printf(
-								/* translators: 1: email address, 2: phone number */
-								esc_html__( 'You may decline to submit information through this website. If you have questions about data we have collected, contact us at %1$s or %2$s.', 'bmg-theme' ),
-								'<a href="mailto:' . esc_attr( $email ) . '">' . esc_html( $email ) . '</a>',
-								'<a href="tel:' . esc_attr( $phone_link ) . '">' . esc_html( $phone_display ) . '</a>'
-							);
-							?>
-						</p>
-
-						<h3><?php esc_html_e( 'Changes to This Policy', 'bmg-theme' ); ?></h3>
-
-						<p><?php esc_html_e( 'We may update this policy from time to time. The effective date at the top of this page reflects the most recent revision.', 'bmg-theme' ); ?></p>
-
-					</article>
 				</div>
 			</div>
 		</div>

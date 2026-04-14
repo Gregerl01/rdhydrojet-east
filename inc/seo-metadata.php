@@ -145,16 +145,16 @@ function bmg_seo_page_data() {
 			'description' => __( '[FAQ page meta description — summarize common questions covered.]', 'bmg-theme' ),
 		),
 		'page-contact'  => array(
-			'title'       => __( 'Contact — [Business Name]', 'bmg-theme' ),
-			'description' => __( '[Contact page meta description — mention contact methods and location.]', 'bmg-theme' ),
+			'title'       => __( 'Contact RD Hydrojet Plumbing | East San Diego County Plumber', 'bmg-theme' ),
+			'description' => __( 'Contact RD Hydrojet Plumbing for a free estimate. Serving El Cajon, La Mesa, Santee & East County. Licensed CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
 		),
 		'page-privacy'  => array(
-			'title'       => __( 'Privacy Policy — [Business Name]', 'bmg-theme' ),
-			'description' => __( '[Privacy page meta description — mention privacy practices and compliance.]', 'bmg-theme' ),
+			'title'       => __( 'Privacy Policy | RD Hydrojet Plumbing', 'bmg-theme' ),
+			'description' => __( 'Privacy policy for RD Hydrojet Plumbing & Drain Inc. Learn how we collect, use, and protect your information.', 'bmg-theme' ),
 		),
 		'page-terms'    => array(
-			'title'       => __( 'Terms of Use — [Business Name]', 'bmg-theme' ),
-			'description' => __( '[Terms page meta description — mention terms of use and disclaimers.]', 'bmg-theme' ),
+			'title'       => __( 'Terms of Use | RD Hydrojet Plumbing', 'bmg-theme' ),
+			'description' => __( 'Terms of use for the RD Hydrojet Plumbing website. Review the terms governing your use of our site and services.', 'bmg-theme' ),
 		),
 	);
 }

@@ -1,108 +1,120 @@
 <?php
 /**
- * Template Name: Terms of Use Page
+ * Template Name: Terms of Use
  *
- * Website Terms of Use.
+ * Website Terms of Use for RD Hydrojet Plumbing & Drain Inc.
  *
- * @package starter-theme
+ * @package bmg-theme
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+// Noindex — legal pages should not be indexed.
+add_action( 'wp_head', function() {
+	echo '<meta name="robots" content="noindex, follow">' . "\n";
+}, 1 );
+
 // Dynamic variables.
-$effective_date = get_theme_mod( 'bmg_privacy_effective_date', '[Effective Date]' );
-$address_street = get_theme_mod( 'bmg_address_street', '[Street Address]' );
-$address_city   = get_theme_mod( 'bmg_address_city', '[City, State ZIP]' );
-$phone_display  = get_theme_mod( 'bmg_phone', '(000) 000-0000' );
-$phone_link     = preg_replace( '/[^0-9+]/', '', $phone_display );
-$email          = get_theme_mod( 'bmg_email', 'info@example.com' );
+$phone_display = get_theme_mod( 'bmg_phone', '(619) 571-1777' );
+$phone_link    = preg_replace( '/[^0-9+]/', '', $phone_display );
+$email         = get_theme_mod( 'bmg_email', 'info@rdhydrojeteast.com' );
 
 get_header();
 ?>
 
 <main id="main" class="site-main">
 
-	<!-- Page Header -->
-	<section class="section section-dark page-header">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-8 text-center">
-					<h1 class="display-text display-4 mb-3">
-						<?php esc_html_e( 'Terms of Use', 'bmg-theme' ); ?>
-					</h1>
-					<p class="text-muted small mb-0">
-						<?php
-						printf(
-							/* translators: %s: effective date */
-							esc_html__( 'Effective: %s', 'bmg-theme' ),
-							esc_html( $effective_date )
-						);
-						?>
-					</p>
-				</div>
-			</div>
+	<!-- Section 1: Hero -->
+	<section class="section-sd-hero section-dark">
+		<div class="section-sd-hero__bg" aria-hidden="true"></div>
+		<div class="container section-sd-hero__container">
+			<nav class="section-sd-hero__breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'bmg-theme' ); ?>">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'bmg-theme' ); ?></a>
+				<span aria-hidden="true">/</span>
+				<span><?php esc_html_e( 'Terms of Use', 'bmg-theme' ); ?></span>
+			</nav>
+			<h1 class="section-sd-hero__title bmg-reveal"><?php esc_html_e( 'Terms of Use', 'bmg-theme' ); ?></h1>
+			<p class="section-sd-hero__sub bmg-reveal"><?php esc_html_e( 'Please review the terms that govern your use of our website.', 'bmg-theme' ); ?></p>
 		</div>
 	</section>
 
-	<!-- Terms of Use -->
-	<section class="section section-light reveal-on-scroll">
+	<!-- Section 2: Terms Content -->
+	<section class="section-legal">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-lg-8">
-					<article class="legal-content">
+				<div class="col-lg-8 mx-auto">
 
-						<h2><?php esc_html_e( 'Agreement to Terms', 'bmg-theme' ); ?></h2>
+					<p class="section-legal__updated bmg-reveal"><?php esc_html_e( 'Last Updated: April 2026', 'bmg-theme' ); ?></p>
 
-						<p><?php esc_html_e( 'By accessing or using the [Business Name] website ([website URL]), you agree to be bound by these Terms of Use. If you do not agree, please do not use this website.', 'bmg-theme' ); ?></p>
+					<article class="section-legal__content bmg-reveal">
 
-						<h2><?php esc_html_e( 'Website Purpose and Medical Disclaimer', 'bmg-theme' ); ?></h2>
+						<h2><?php esc_html_e( 'Acceptance of Terms', 'bmg-theme' ); ?></h2>
 
-						<p><?php esc_html_e( 'This website is published by [Business Name] for informational purposes only. The content on this site, including text, graphics, and other material, is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.', 'bmg-theme' ); ?></p>
-
-						<p><?php esc_html_e( 'No information on this website establishes a physician-patient relationship. A physician-patient relationship is created only through a signed membership agreement and an in-person or telehealth consultation with [Provider Name].', 'bmg-theme' ); ?></p>
-
-						<p><?php esc_html_e( 'If you are experiencing a medical emergency, call 911 or go to the nearest emergency room immediately. Do not rely on this website for emergency medical needs.', 'bmg-theme' ); ?></p>
-
-						<h2><?php esc_html_e( 'Intellectual Property', 'bmg-theme' ); ?></h2>
-
-						<p><?php esc_html_e( 'All content on this website, including text, images, graphics, logos, page layout, and design, is the property of [Business Name] and is protected by United States copyright and trademark laws. You may not reproduce, distribute, modify, or create derivative works from any content on this site without prior written consent from [Business Name].', 'bmg-theme' ); ?></p>
-
-						<p><?php esc_html_e( 'The [Business Name] name, logo, and branding are trademarks of [Business Name]. Use of these marks without written permission is prohibited.', 'bmg-theme' ); ?></p>
+						<p><?php esc_html_e( 'By accessing and using the RD Hydrojet Plumbing website, you agree to be bound by these Terms of Use. If you do not agree with any part of these terms, please discontinue use of this website.', 'bmg-theme' ); ?></p>
 
 						<h2><?php esc_html_e( 'Use of This Website', 'bmg-theme' ); ?></h2>
 
-						<p><?php esc_html_e( 'You agree to use this website only for lawful purposes and in a manner that does not infringe the rights of, restrict, or inhibit anyone else\'s use of the site. You may not use this website to transmit any material that is unlawful, threatening, abusive, defamatory, or otherwise objectionable.', 'bmg-theme' ); ?></p>
+						<p><?php esc_html_e( 'This website is provided for informational purposes and to facilitate requests for plumbing services in the East San Diego County area. You may browse our service descriptions, submit service requests, and access contact information.', 'bmg-theme' ); ?></p>
 
-						<h2><?php esc_html_e( 'Third-Party Links', 'bmg-theme' ); ?></h2>
+						<p><?php esc_html_e( 'Users must be at least 18 years of age to submit service requests or contact forms through this website. All information submitted must be accurate and truthful. We reserve the right to refuse service based on inaccurate or misleading submissions.', 'bmg-theme' ); ?></p>
 
-						<p><?php esc_html_e( 'This website may contain links to external websites that are not operated by [Business Name]. We have no control over the content or practices of these sites and accept no responsibility for them. Inclusion of any link does not imply endorsement by [Business Name].', 'bmg-theme' ); ?></p>
+						<h2><?php esc_html_e( 'Services and Estimates', 'bmg-theme' ); ?></h2>
+
+						<p><?php esc_html_e( 'The service descriptions on this website are provided for general informational purposes. The actual scope, method, and materials for any plumbing job are determined during on-site inspection and diagnosis.', 'bmg-theme' ); ?></p>
+
+						<p><?php esc_html_e( 'Estimates submitted through our website are requests for pricing, not binding quotes. Final pricing is confirmed after our licensed plumber inspects the situation in person and provides a written estimate. No work begins without your approval of the final quote.', 'bmg-theme' ); ?></p>
+
+						<p><?php esc_html_e( 'Emergency service availability is subject to technician availability and current call volume. We make every effort to respond to emergencies promptly, but response times may vary.', 'bmg-theme' ); ?></p>
+
+						<h2><?php esc_html_e( 'Intellectual Property', 'bmg-theme' ); ?></h2>
+
+						<p><?php esc_html_e( 'All content on this website — including text, images, logos, graphics, icons, and page design — is the property of RD Hydrojet Plumbing & Drain Inc. and is protected by applicable copyright and trademark laws.', 'bmg-theme' ); ?></p>
+
+						<p><?php esc_html_e( 'You may not reproduce, distribute, modify, or create derivative works from any content on this website without prior written permission from RD Hydrojet Plumbing & Drain Inc.', 'bmg-theme' ); ?></p>
+
+						<p><?php esc_html_e( 'Website design and development by GSL Design (gsldesign.net).', 'bmg-theme' ); ?></p>
 
 						<h2><?php esc_html_e( 'Limitation of Liability', 'bmg-theme' ); ?></h2>
 
-						<p><?php esc_html_e( '[Business Name] makes reasonable efforts to ensure the information on this website is accurate and current. However, we make no warranties or representations regarding the completeness, accuracy, or reliability of any content. To the fullest extent permitted by law, [Business Name] shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of or inability to use this website.', 'bmg-theme' ); ?></p>
+						<p><?php esc_html_e( 'This website and its content are provided "as is" without warranties of any kind, either express or implied. RD Hydrojet Plumbing & Drain Inc. does not warrant that the website will be uninterrupted, error-free, or free of harmful components.', 'bmg-theme' ); ?></p>
+
+						<p><?php esc_html_e( 'RD Hydrojet Plumbing & Drain Inc. shall not be liable for any damages arising from your use of this website or reliance on information presented here. Service guarantees and warranties are governed by individual service agreements provided at the time of service, not by website content.', 'bmg-theme' ); ?></p>
+
+						<h2><?php esc_html_e( 'Licensing and Credentials', 'bmg-theme' ); ?></h2>
+
+						<p><?php esc_html_e( 'RD Hydrojet Plumbing & Drain Inc. is a licensed, bonded, and insured plumbing contractor in the State of California.', 'bmg-theme' ); ?></p>
+
+						<p><?php esc_html_e( 'California Contractors State License Board (CSLB) License #1076642', 'bmg-theme' ); ?><br>
+						<?php esc_html_e( 'Classifications: C-36 Plumbing, C-42 Sanitation, C-20 HVAC', 'bmg-theme' ); ?></p>
+
+						<p><?php esc_html_e( 'License status can be verified at the CSLB website (www.cslb.ca.gov).', 'bmg-theme' ); ?></p>
+
+						<h2><?php esc_html_e( 'Third-Party Links', 'bmg-theme' ); ?></h2>
+
+						<p><?php esc_html_e( 'This website may contain links to third-party websites, including our Google Business Profile, Yelp listing, and the California Contractors State License Board. These links are provided for your convenience. We do not control or endorse the content of external websites and are not responsible for their privacy practices or content.', 'bmg-theme' ); ?></p>
 
 						<h2><?php esc_html_e( 'Governing Law', 'bmg-theme' ); ?></h2>
 
-						<p><?php esc_html_e( 'These Terms of Use are governed by and construed in accordance with the laws of [State], without regard to its conflict of law provisions. Any disputes arising under these terms shall be subject to the exclusive jurisdiction of the courts located in [County, State].', 'bmg-theme' ); ?></p>
-
-						<h2><?php esc_html_e( 'Changes to These Terms', 'bmg-theme' ); ?></h2>
-
-						<p><?php esc_html_e( '[Business Name] reserves the right to modify these Terms of Use at any time. Changes take effect immediately upon posting to this page. The effective date at the top of this page reflects the most recent revision. Your continued use of the website after changes are posted constitutes your acceptance of the revised terms.', 'bmg-theme' ); ?></p>
+						<p><?php esc_html_e( 'These Terms of Use are governed by and construed in accordance with the laws of the State of California. Any disputes arising from these terms or your use of this website shall be subject to the exclusive jurisdiction of the courts of San Diego County, California.', 'bmg-theme' ); ?></p>
 
 						<h2><?php esc_html_e( 'Contact', 'bmg-theme' ); ?></h2>
 
-						<p><?php esc_html_e( 'If you have questions about these Terms of Use, contact:', 'bmg-theme' ); ?></p>
+						<p><?php esc_html_e( 'Questions about these terms? Contact us:', 'bmg-theme' ); ?></p>
 
-						<address class="privacy-contact-block">
-							<strong><?php esc_html_e( '[Business Name]', 'bmg-theme' ); ?></strong><br>
-							<?php echo esc_html( $address_street ); ?><br>
-							<?php echo esc_html( $address_city ); ?><br>
-							<a href="tel:<?php echo esc_attr( $phone_link ); ?>"><?php echo esc_html( $phone_display ); ?></a><br>
-							<a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a>
+						<address class="section-legal__contact">
+							<?php esc_html_e( 'Phone:', 'bmg-theme' ); ?> <a href="tel:<?php echo esc_attr( $phone_link ); ?>"><?php echo esc_html( $phone_display ); ?></a><br>
+							<?php esc_html_e( 'Email:', 'bmg-theme' ); ?> <a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a><br>
+							<?php esc_html_e( 'RD Hydrojet Plumbing & Drain Inc.', 'bmg-theme' ); ?><br>
+							<?php esc_html_e( 'East San Diego County, CA', 'bmg-theme' ); ?>
 						</address>
 
+						<h2><?php esc_html_e( 'Changes to These Terms', 'bmg-theme' ); ?></h2>
+
+						<p><?php esc_html_e( 'We reserve the right to update these Terms of Use at any time. Changes take effect upon posting to this website. The "Last Updated" date at the top of this page reflects the most recent revision. Your continued use of the website after changes are posted constitutes acceptance of the revised terms.', 'bmg-theme' ); ?></p>
+
 					</article>
+
 				</div>
 			</div>
 		</div>

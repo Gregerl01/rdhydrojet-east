@@ -4227,3 +4227,294 @@ select option {
     }
   }
 }
+
+// ==========================================================================
+// Contact Page
+// ==========================================================================
+
+.section-contact {
+  background: $brand-white;
+  padding: $section-padding-desktop 0;
+
+  @media (max-width: 767.98px) {
+    padding: $section-padding-mobile 0;
+  }
+
+  &__form-card {
+    background: $brand-white;
+    border-radius: $radius-lg;
+    padding: $space-lg;
+    box-shadow: $shadow-lg;
+    border: 1px solid $border-color;
+    transition: box-shadow $transition-base;
+
+    @media (min-width: 992px) {
+      padding: $space-xl;
+    }
+
+    &:focus-within {
+      box-shadow: $shadow-xl;
+    }
+  }
+
+  &__form-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $text-primary;
+    margin-bottom: $space-xs;
+  }
+
+  &__form-sub {
+    font-size: 0.875rem;
+    color: $text-secondary;
+    margin-bottom: $space-md;
+  }
+
+  &__form-micro {
+    font-size: 0.75rem;
+    color: $text-secondary;
+    text-align: center;
+    margin-top: $space-sm;
+    margin-bottom: 0;
+  }
+
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+
+    @media (min-width: 992px) {
+      position: sticky;
+      top: 100px;
+    }
+  }
+
+  &__info-card {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    padding: $space-sm $space-md;
+    background: $brand-surface;
+    border-radius: $radius-lg;
+    border: 1px solid $border-color;
+    text-decoration: none;
+    color: $text-primary;
+    transition: box-shadow $transition-fast;
+
+    &:hover {
+      box-shadow: $shadow-sm;
+      color: $text-primary;
+    }
+  }
+
+  &__info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: $radius-full;
+    background: rgba($brand-primary, 0.1);
+    color: $brand-primary;
+    flex-shrink: 0;
+  }
+
+  &__info-label {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    font-family: $font-family-mono;
+    letter-spacing: 0.06em;
+    color: $text-secondary;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  &__info-value {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: $text-primary;
+    text-decoration: none;
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  &__info-sub {
+    font-size: 0.75rem;
+    color: $text-secondary;
+  }
+
+  &__emergency {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-sm;
+    padding: $space-md;
+    background: rgba($brand-primary, 0.06);
+    border-radius: $radius-lg;
+    border: 1px solid rgba($brand-primary, 0.15);
+  }
+
+  &__emergency-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: $radius-full;
+    background: rgba($brand-primary, 0.15);
+    color: $brand-primary;
+    flex-shrink: 0;
+  }
+
+  &__emergency-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $brand-primary;
+    margin-bottom: 2px;
+  }
+
+  &__emergency-sub {
+    font-size: 0.8125rem;
+    color: $text-secondary;
+    margin-bottom: 0;
+  }
+}
+
+// Contact Areas Strip
+.section-contact-areas {
+  background: $brand-surface;
+  padding: $space-xl 0;
+
+  &__text {
+    text-align: center;
+    font-size: 1rem;
+    color: $text-secondary;
+    margin: 0;
+    line-height: 1.65;
+
+    a {
+      color: $brand-primary;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Contact Trust Bar
+.section-contact-trust {
+  background: $brand-dark;
+  padding: $space-xl 0;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: $space-xs;
+    color: $brand-white;
+    padding: $space-sm 0;
+  }
+
+  &__icon {
+    color: $brand-primary;
+  }
+
+  &__label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: $brand-white;
+    margin-bottom: 0;
+  }
+
+  &__sub {
+    font-size: 0.75rem;
+    color: rgba($brand-white, 0.6);
+  }
+}
+
+// ==========================================================================
+// Legal Pages (Privacy Policy, Terms of Use)
+// ==========================================================================
+
+.section-legal {
+  background: $brand-white;
+  padding: $section-padding-desktop 0;
+
+  @media (max-width: 767.98px) {
+    padding: $section-padding-mobile 0;
+  }
+
+  &__updated {
+    display: inline-block;
+    font-family: $font-family-mono;
+    font-size: 0.8125rem;
+    color: $text-secondary;
+    margin-bottom: $space-lg;
+  }
+
+  &__content {
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $text-primary;
+      margin-top: $space-xl;
+      margin-bottom: $space-sm;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      color: $text-secondary;
+      line-height: 1.7;
+      margin-bottom: $space-md;
+    }
+
+    ul {
+      margin-bottom: $space-md;
+      padding-left: $space-md;
+
+      li {
+        font-size: 1rem;
+        color: $text-secondary;
+        line-height: 1.7;
+        margin-bottom: $space-xs;
+      }
+    }
+
+    a {
+      color: $brand-primary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__contact-block {
+    background: $brand-surface;
+    border-radius: $radius-lg;
+    padding: $space-lg;
+    border: 1px solid $border-color;
+    margin-top: $space-md;
+    margin-bottom: $space-md;
+
+    p {
+      margin-bottom: $space-xs;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
