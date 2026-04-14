@@ -4839,3 +4839,158 @@ select option {
     }
   }
 }
+
+// ==========================================================================
+// Gravity Forms — Brand Overrides
+// ==========================================================================
+
+.gform_wrapper.gravity-theme {
+  .gform_body {
+    .gfield {
+      margin-bottom: $space-sm;
+    }
+
+    .gfield_label {
+      font-family: $font-family-base;
+      font-weight: 500;
+      font-size: 0.875rem;
+      color: $text-primary;
+      margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: $space-xs $space-sm;
+      border: 1px solid $border-color;
+      border-radius: $radius-md;
+      font-family: $font-family-base;
+      font-size: 0.9375rem;
+      background: $brand-surface;
+      color: $text-primary;
+      height: $form-height;
+      transition: border-color $transition-fast, box-shadow $transition-fast;
+
+      &:focus {
+        outline: none;
+        border-color: $form-border-focus;
+        box-shadow: 0 0 0 3px rgba($brand-primary, 0.12);
+      }
+
+      &::placeholder {
+        color: $text-secondary;
+      }
+    }
+
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      padding-right: 40px;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2364748B' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 16px 16px;
+    }
+
+    textarea {
+      height: auto;
+      min-height: 100px;
+      resize: vertical;
+    }
+  }
+
+  .gform_footer,
+  .gform_page_footer {
+    margin-top: $space-xs;
+    padding: 0;
+
+    input[type="submit"],
+    button[type="submit"] {
+      width: 100%;
+      padding: $btn-primary-padding-y $btn-primary-padding-x;
+      background: $btn-primary-bg;
+      color: $btn-primary-text;
+      border: none;
+      border-radius: $radius-button;
+      font-family: $font-family-base;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background $transition-base, transform $transition-fast;
+
+      &:hover {
+        background: $btn-primary-hover-bg;
+        transform: translateY($hover-lift);
+      }
+    }
+  }
+
+  // Validation
+  .gfield_error {
+    input,
+    select,
+    textarea {
+      border-color: $brand-primary !important;
+    }
+
+    .gfield_label {
+      color: $brand-primary;
+    }
+  }
+
+  .validation_message {
+    font-size: 0.8125rem;
+    color: $brand-primary;
+    margin-top: 4px;
+  }
+
+  .gform_confirmation_message {
+    padding: $space-md;
+    background: rgba($trust-green, 0.08);
+    border: 1px solid rgba($trust-green, 0.2);
+    border-radius: $radius-md;
+    color: $text-primary;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+// Hero form card — Gravity Forms overrides for glassmorphism card
+.section-hero__form-card .gform_wrapper.gravity-theme {
+  .gfield_label {
+    color: $brand-white;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    background: rgba($brand-white, 0.2);
+    border-color: rgba($brand-white, 0.3);
+    color: $brand-white;
+
+    &::placeholder {
+      color: rgba($brand-white, 0.5);
+    }
+
+    &:focus {
+      border-color: $brand-primary;
+      box-shadow: 0 0 0 3px rgba($brand-primary, 0.25);
+      background: rgba($brand-white, 0.25);
+    }
+  }
+
+  select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  }
+
+  .validation_message {
+    color: lighten($brand-primary, 15%);
+  }
+}

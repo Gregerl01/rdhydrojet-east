@@ -33,47 +33,8 @@ $office_hours  = get_theme_mod( 'bmg_office_hours', 'Mon-Fri: 7AM - 7PM' );
 				<div class="section-cta__form-card">
 					<h3 class="section-cta__form-title">Request Your Free Estimate</h3>
 
-					<form class="lead-form" method="post" action="#">
-						<div class="row gy-3">
-							<div class="col-md-6">
-								<label for="cta-name" class="form-label">Full Name</label>
-								<input type="text" class="form-control" id="cta-name" name="full_name" placeholder="Your full name" required>
-							</div>
-							<div class="col-md-6">
-								<label for="cta-phone" class="form-label">Phone Number</label>
-								<input type="tel" class="form-control" id="cta-phone" name="phone" placeholder="(619) 000-0000" required>
-							</div>
-							<div class="col-md-6">
-								<label for="cta-email" class="form-label">Email Address</label>
-								<input type="email" class="form-control" id="cta-email" name="email" placeholder="you@email.com">
-							</div>
-							<div class="col-md-6">
-								<label for="cta-service" class="form-label">Service Needed</label>
-								<select class="form-select" id="cta-service" name="service" required>
-									<option value="" disabled selected>Select a service</option>
-									<option value="hydro-jetting">Hydro Jetting</option>
-									<option value="drain-sewer">Drain &amp; Sewer Repair</option>
-									<option value="water-heater">Water Heater</option>
-									<option value="leak-detection">Leak Detection</option>
-									<option value="gas-line">Gas Line Repair</option>
-									<option value="emergency">24/7 Emergency</option>
-									<option value="other">Other</option>
-								</select>
-							</div>
-							<div class="col-12">
-								<label for="cta-address" class="form-label">Your Address</label>
-								<input type="text" class="form-control" id="cta-address" name="address" placeholder="Street address, city">
-							</div>
-							<div class="col-12">
-								<label for="cta-details" class="form-label">Additional Details <span class="text-muted">(optional)</span></label>
-								<textarea class="form-control" id="cta-details" name="details" rows="3" placeholder="Describe the issue — symptoms, how long, fixture location..."></textarea>
-							</div>
-							<div class="col-12">
-								<button type="submit" class="btn btn-cta-primary w-100">Request Free Estimate</button>
-								<p class="section-cta__form-micro">No spam, no obligation &mdash; just honest diagnostics.</p>
-							</div>
-						</div>
-					</form>
+					<?php bmg_render_gravity_form( BMG_CONTACT_FORM_ID ); ?>
+					<p class="section-cta__form-micro">No spam, no obligation &mdash; just honest diagnostics.</p>
 				</div>
 			</div>
 

@@ -117,31 +117,8 @@ if ( $hero_bg_image ) {
 					<h2 class="section-hero__form-title">Request Service</h2>
 					<p class="section-hero__form-sub">Free estimates &middot; Same-day response</p>
 
-					<form class="lead-form" method="post" action="#">
-						<div class="mb-3">
-							<label for="hero-name" class="form-label">Full Name</label>
-							<input type="text" class="form-control" id="hero-name" name="full_name" placeholder="Your full name" required>
-						</div>
-						<div class="mb-3">
-							<label for="hero-phone" class="form-label">Phone Number</label>
-							<input type="tel" class="form-control" id="hero-phone" name="phone" placeholder="(619) 000-0000" required>
-						</div>
-						<div class="mb-3">
-							<label for="hero-service" class="form-label">Service Needed</label>
-							<select class="form-select" id="hero-service" name="service" required>
-								<option value="" disabled selected>Select a service</option>
-								<option value="hydro-jetting">Hydro Jetting</option>
-								<option value="drain-sewer">Drain &amp; Sewer Repair</option>
-								<option value="water-heater">Water Heater</option>
-								<option value="leak-detection">Leak Detection</option>
-								<option value="gas-line">Gas Line Repair</option>
-								<option value="emergency">24/7 Emergency</option>
-								<option value="other">Other</option>
-							</select>
-						</div>
-						<button type="submit" class="btn btn-cta-primary w-100">Request Free Estimate</button>
+					<?php bmg_render_gravity_form( BMG_QUICK_QUOTE_FORM_ID ); ?>
 						<p class="section-hero__form-micro">No spam, no obligation &mdash; just honest diagnostics.</p>
-					</form>
 				</div>
 			</div>
 

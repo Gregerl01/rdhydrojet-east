@@ -150,6 +150,7 @@ $bmg_includes = array(
 	'/customizer-emergency.php',     // Emergency section (heading, 3 cards, CTA).
 	'/dark-mode.php',                // Dark mode FOUC prevention and data-bs-theme attribute.
 	'/seo-metadata.php',             // SEO title tags and meta descriptions.
+	'/gravity-forms-setup.php',      // Gravity Forms creation + SMTP notice.
 	'/starter-posts.php',            // One-time starter blog post creation.
 );
 

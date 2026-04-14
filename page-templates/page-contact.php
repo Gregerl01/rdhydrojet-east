@@ -94,51 +94,8 @@ get_header();
 					<div class="section-contact__form-card">
 						<h2 class="section-contact__form-title"><?php esc_html_e( 'Request Your Free Estimate', 'bmg-theme' ); ?></h2>
 
-						<form class="lead-form" method="post" action="#">
-							<div class="row gy-3">
-								<div class="col-md-6">
-									<label for="contact-name" class="form-label"><?php esc_html_e( 'Full Name', 'bmg-theme' ); ?></label>
-									<input type="text" class="form-control" id="contact-name" name="full_name" placeholder="<?php esc_attr_e( 'Your full name', 'bmg-theme' ); ?>" required>
-								</div>
-								<div class="col-md-6">
-									<label for="contact-phone" class="form-label"><?php esc_html_e( 'Phone Number', 'bmg-theme' ); ?></label>
-									<input type="tel" class="form-control" id="contact-phone" name="phone" placeholder="(619) 000-0000" required>
-								</div>
-								<div class="col-md-6">
-									<label for="contact-email" class="form-label"><?php esc_html_e( 'Email Address', 'bmg-theme' ); ?></label>
-									<input type="email" class="form-control" id="contact-email" name="email" placeholder="you@email.com">
-								</div>
-								<div class="col-md-6">
-									<label for="contact-service" class="form-label"><?php esc_html_e( 'Service Needed', 'bmg-theme' ); ?></label>
-									<select class="form-select" id="contact-service" name="service" required>
-										<option value="" disabled selected><?php esc_html_e( 'Select a service', 'bmg-theme' ); ?></option>
-										<option value="hydro-jetting"><?php esc_html_e( 'Hydro Jetting', 'bmg-theme' ); ?></option>
-										<option value="drain-sewer"><?php esc_html_e( 'Drain &amp; Sewer Repair', 'bmg-theme' ); ?></option>
-										<option value="water-heater"><?php esc_html_e( 'Water Heater', 'bmg-theme' ); ?></option>
-										<option value="leak-detection"><?php esc_html_e( 'Leak Detection', 'bmg-theme' ); ?></option>
-										<option value="gas-line"><?php esc_html_e( 'Gas Line Repair', 'bmg-theme' ); ?></option>
-										<option value="toilet-repair"><?php esc_html_e( 'Toilet Repair', 'bmg-theme' ); ?></option>
-										<option value="emergency"><?php esc_html_e( '24/7 Emergency', 'bmg-theme' ); ?></option>
-										<option value="repiping"><?php esc_html_e( 'Repiping', 'bmg-theme' ); ?></option>
-										<option value="septic-sanitation"><?php esc_html_e( 'Septic &amp; Sanitation', 'bmg-theme' ); ?></option>
-										<option value="new-construction"><?php esc_html_e( 'New Construction Plumbing', 'bmg-theme' ); ?></option>
-										<option value="other"><?php esc_html_e( 'Other', 'bmg-theme' ); ?></option>
-									</select>
-								</div>
-								<div class="col-12">
-									<label for="contact-address" class="form-label"><?php esc_html_e( 'Street Address / City', 'bmg-theme' ); ?></label>
-									<input type="text" class="form-control" id="contact-address" name="address" placeholder="<?php esc_attr_e( 'Street address, city', 'bmg-theme' ); ?>">
-								</div>
-								<div class="col-12">
-									<label for="contact-details" class="form-label"><?php esc_html_e( 'Additional Details', 'bmg-theme' ); ?> <span class="text-muted">(<?php esc_html_e( 'optional', 'bmg-theme' ); ?>)</span></label>
-									<textarea class="form-control" id="contact-details" name="details" rows="4" placeholder="<?php esc_attr_e( 'Describe the issue — upstairs, downstairs, leaking, flooding, no rush, etc.', 'bmg-theme' ); ?>"></textarea>
-								</div>
-								<div class="col-12">
-									<button type="submit" class="btn btn-cta-primary w-100"><?php esc_html_e( 'Request Free Estimate', 'bmg-theme' ); ?></button>
-									<p class="section-contact__form-micro"><?php esc_html_e( 'We typically respond within 1 hour during business hours. No spam, no obligation.', 'bmg-theme' ); ?></p>
-								</div>
-							</div>
-						</form>
+						<?php bmg_render_gravity_form( BMG_CONTACT_FORM_ID ); ?>
+						<p class="section-contact__form-micro"><?php esc_html_e( "We typically respond within 1 hour during business hours. No spam, no obligation.", "bmg-theme" ); ?></p>
 					</div>
 				</div>
 

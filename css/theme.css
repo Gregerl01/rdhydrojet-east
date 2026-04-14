@@ -20533,6 +20533,161 @@ select option {
   display: none;
 }
 
+.gform_wrapper.gravity-theme .gform_body .gfield {
+  margin-bottom: 1rem;
+}
+.gform_wrapper.gravity-theme .gform_body .gfield_label {
+  font-family: "Plus Jakarta Sans", Arial, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #111111;
+  margin-bottom: 4px;
+}
+.gform_wrapper.gravity-theme .gform_body input[type=text],
+.gform_wrapper.gravity-theme .gform_body input[type=email],
+.gform_wrapper.gravity-theme .gform_body input[type=tel],
+.gform_wrapper.gravity-theme .gform_body input[type=url],
+.gform_wrapper.gravity-theme .gform_body input[type=number],
+.gform_wrapper.gravity-theme .gform_body select,
+.gform_wrapper.gravity-theme .gform_body textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #E5E5E5;
+  border-radius: 8px;
+  font-family: "Plus Jakarta Sans", Arial, "Helvetica Neue", sans-serif;
+  font-size: 0.9375rem;
+  background: #F7F7F7;
+  color: #111111;
+  height: 52px;
+  transition: border-color 150ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gform_wrapper.gravity-theme .gform_body input[type=text]:focus,
+.gform_wrapper.gravity-theme .gform_body input[type=email]:focus,
+.gform_wrapper.gravity-theme .gform_body input[type=tel]:focus,
+.gform_wrapper.gravity-theme .gform_body input[type=url]:focus,
+.gform_wrapper.gravity-theme .gform_body input[type=number]:focus,
+.gform_wrapper.gravity-theme .gform_body select:focus,
+.gform_wrapper.gravity-theme .gform_body textarea:focus {
+  outline: none;
+  border-color: #111111;
+  box-shadow: 0 0 0 3px rgba(215, 38, 44, 0.12);
+}
+.gform_wrapper.gravity-theme .gform_body input[type=text]::-moz-placeholder, .gform_wrapper.gravity-theme .gform_body input[type=email]::-moz-placeholder, .gform_wrapper.gravity-theme .gform_body input[type=tel]::-moz-placeholder, .gform_wrapper.gravity-theme .gform_body input[type=url]::-moz-placeholder, .gform_wrapper.gravity-theme .gform_body input[type=number]::-moz-placeholder, .gform_wrapper.gravity-theme .gform_body select::-moz-placeholder, .gform_wrapper.gravity-theme .gform_body textarea::-moz-placeholder {
+  color: #555555;
+}
+.gform_wrapper.gravity-theme .gform_body input[type=text]::placeholder,
+.gform_wrapper.gravity-theme .gform_body input[type=email]::placeholder,
+.gform_wrapper.gravity-theme .gform_body input[type=tel]::placeholder,
+.gform_wrapper.gravity-theme .gform_body input[type=url]::placeholder,
+.gform_wrapper.gravity-theme .gform_body input[type=number]::placeholder,
+.gform_wrapper.gravity-theme .gform_body select::placeholder,
+.gform_wrapper.gravity-theme .gform_body textarea::placeholder {
+  color: #555555;
+}
+.gform_wrapper.gravity-theme .gform_body select {
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2364748B' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+}
+.gform_wrapper.gravity-theme .gform_body textarea {
+  height: auto;
+  min-height: 100px;
+  resize: vertical;
+}
+.gform_wrapper.gravity-theme .gform_footer,
+.gform_wrapper.gravity-theme .gform_page_footer {
+  margin-top: 0.5rem;
+  padding: 0;
+}
+.gform_wrapper.gravity-theme .gform_footer input[type=submit],
+.gform_wrapper.gravity-theme .gform_footer button[type=submit],
+.gform_wrapper.gravity-theme .gform_page_footer input[type=submit],
+.gform_wrapper.gravity-theme .gform_page_footer button[type=submit] {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: #D7262C;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0;
+  font-family: "Plus Jakarta Sans", Arial, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 200ms ease, transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gform_wrapper.gravity-theme .gform_footer input[type=submit]:hover,
+.gform_wrapper.gravity-theme .gform_footer button[type=submit]:hover,
+.gform_wrapper.gravity-theme .gform_page_footer input[type=submit]:hover,
+.gform_wrapper.gravity-theme .gform_page_footer button[type=submit]:hover {
+  background: rgb(180.3280632411, 31.8719367589, 36.9043478261);
+  transform: translateY(-2px);
+}
+.gform_wrapper.gravity-theme .gfield_error input,
+.gform_wrapper.gravity-theme .gfield_error select,
+.gform_wrapper.gravity-theme .gfield_error textarea {
+  border-color: #D7262C !important;
+}
+.gform_wrapper.gravity-theme .gfield_error .gfield_label {
+  color: #D7262C;
+}
+.gform_wrapper.gravity-theme .validation_message {
+  font-size: 0.8125rem;
+  color: #D7262C;
+  margin-top: 4px;
+}
+.gform_wrapper.gravity-theme .gform_confirmation_message {
+  padding: 1.5rem;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 8px;
+  color: #111111;
+  font-weight: 500;
+  text-align: center;
+}
+
+.section-hero__form-card .gform_wrapper.gravity-theme .gfield_label {
+  color: #FFFFFF;
+}
+.section-hero__form-card .gform_wrapper.gravity-theme input[type=text],
+.section-hero__form-card .gform_wrapper.gravity-theme input[type=email],
+.section-hero__form-card .gform_wrapper.gravity-theme input[type=tel],
+.section-hero__form-card .gform_wrapper.gravity-theme select,
+.section-hero__form-card .gform_wrapper.gravity-theme textarea {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+}
+.section-hero__form-card .gform_wrapper.gravity-theme input[type=text]::-moz-placeholder, .section-hero__form-card .gform_wrapper.gravity-theme input[type=email]::-moz-placeholder, .section-hero__form-card .gform_wrapper.gravity-theme input[type=tel]::-moz-placeholder, .section-hero__form-card .gform_wrapper.gravity-theme select::-moz-placeholder, .section-hero__form-card .gform_wrapper.gravity-theme textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.section-hero__form-card .gform_wrapper.gravity-theme input[type=text]::placeholder,
+.section-hero__form-card .gform_wrapper.gravity-theme input[type=email]::placeholder,
+.section-hero__form-card .gform_wrapper.gravity-theme input[type=tel]::placeholder,
+.section-hero__form-card .gform_wrapper.gravity-theme select::placeholder,
+.section-hero__form-card .gform_wrapper.gravity-theme textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.section-hero__form-card .gform_wrapper.gravity-theme input[type=text]:focus,
+.section-hero__form-card .gform_wrapper.gravity-theme input[type=email]:focus,
+.section-hero__form-card .gform_wrapper.gravity-theme input[type=tel]:focus,
+.section-hero__form-card .gform_wrapper.gravity-theme select:focus,
+.section-hero__form-card .gform_wrapper.gravity-theme textarea:focus {
+  border-color: #D7262C;
+  box-shadow: 0 0 0 3px rgba(215, 38, 44, 0.25);
+  background: rgba(255, 255, 255, 0.25);
+}
+.section-hero__form-card .gform_wrapper.gravity-theme select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+.section-hero__form-card .gform_wrapper.gravity-theme .validation_message {
+  color: rgb(227.8893280632, 101.6106719368, 105.8913043478);
+}
+
 .woocommerce ul.products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
