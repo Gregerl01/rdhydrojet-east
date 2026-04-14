@@ -135,7 +135,7 @@ if ( $hero_bg_image ) {
 				</div>
 				<div class="col-6 col-md-3">
 					<div class="section-hero__stat">
-						<span class="section-hero__stat-value">4.9&#9733;</span>
+						<span class="section-hero__stat-value">5.0&#9733;</span>
 						<span class="section-hero__stat-label">Average Rating</span>
 					</div>
 				</div>

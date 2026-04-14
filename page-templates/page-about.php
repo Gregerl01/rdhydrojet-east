@@ -81,8 +81,8 @@ get_header();
 	},
 	"aggregateRating": {
 		"@type": "AggregateRating",
-		"ratingValue": "4.9",
-		"reviewCount": "75"
+		"ratingValue": "5.0",
+		"reviewCount": "300"
 	},
 	"hasCredential": [
 		{ "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "C-36 Plumbing", "identifier": "CA CSLB #1076642" },
@@ -270,7 +270,7 @@ get_header();
 				</div>
 				<div class="col-6 col-lg-3 bmg-reveal">
 					<div class="section-about-statbar__item">
-						<span class="section-about-statbar__number">4.9&#9733;</span>
+						<span class="section-about-statbar__number">5.0&#9733;</span>
 						<span class="section-about-statbar__label"><?php esc_html_e( 'Average Rating', 'bmg-theme' ); ?></span>
 					</div>
 				</div>

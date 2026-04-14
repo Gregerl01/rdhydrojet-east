@@ -30,7 +30,7 @@
 **Overline:** `EAST SAN DIEGO'S PLUMBING SPECIALISTS`
 **H1:** `Fast, Licensed Plumbing for East County Homes & Businesses`
 **Subline:** `From hydro jetting to emergency repairs — 20+ years of trusted service across El Cajon, La Mesa, Santee, and all of East San Diego County.`
-**Proof snippet:** `★ 4.9 Rating · 75+ Reviews · CA Lic #1076642`
+**Proof snippet:** `★ 5.0 Rating · 300+ Reviews · CA Lic #1076642`
 **CTA Primary:** `Schedule Service →`
 **CTA Secondary:** `Call (619) 571-1777`
 **Trust strip logos:** Google Reviews · Yelp · BBB · CA CSLB
@@ -89,7 +89,7 @@
 |--------|-------|
 | 1,200+ | Jobs Completed |
 | 20+ | Years Experience |
-| 4.9★ | Average Rating |
+| 5.0★ | Average Rating |
 
 ---
 
