@@ -140,6 +140,7 @@ add_action( 'wp_enqueue_scripts', 'bmg_enqueue_scripts', 20 );
 $bmg_inc_dir = 'inc';
 
 $bmg_includes = array(
+	'/services-data.php',            // Centralized services data (bmg_get_services).
 	'/custom-post-types.php',        // Custom post types for homepage sections.
 	'/customizer-site-identity.php', // Site Identity settings (logo size).
 	'/customizer-practice-info.php', // Business Information panel (provider, contact, hours).

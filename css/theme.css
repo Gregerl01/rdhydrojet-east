@@ -17213,6 +17213,20 @@ select option {
   color: rgb(180.3280632411, 31.8719367589, 36.9043478261);
   gap: 0.5rem;
 }
+.section-features__view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #D7262C;
+  text-decoration: none;
+  transition: gap 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section-features__view-all:hover {
+  color: rgb(180.3280632411, 31.8719367589, 36.9043478261);
+  gap: 1rem;
+}
 
 .section-pricing {
   background: #F7F7F7;

@@ -1026,6 +1026,22 @@ select option {
       }
     }
   }
+
+  &__view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $brand-primary;
+    text-decoration: none;
+    transition: gap $transition-fast;
+
+    &:hover {
+      color: $btn-primary-hover-bg;
+      gap: $space-sm;
+    }
+  }
 }
 
 // ==========================================================================
