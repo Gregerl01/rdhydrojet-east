@@ -71,7 +71,7 @@ get_header();
 											<span class="section-blog__card-category"><?php echo esc_html( $category_name ); ?></span>
 										<?php endif; ?>
 										<h2 class="section-blog__card-title"><?php the_title(); ?></h2>
-										<p class="section-blog__card-excerpt"><?php echo esc_html( get_the_excerpt() ); ?></p>
+										<p class="section-blog__card-excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 25, '...' ) ); ?></p>
 										<div class="section-blog__card-meta">
 											<span class="section-blog__card-date"><?php echo esc_html( get_the_date( 'M j, Y' ) ); ?></span>
 											<span class="section-blog__card-read"><?php echo esc_html( $read_time ); ?> <?php esc_html_e( 'min read', 'bmg-theme' ); ?></span>
