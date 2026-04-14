@@ -62,6 +62,9 @@ $area_cities = array(
 	'lakeside'      => 'Lakeside',
 	'spring-valley' => 'Spring Valley',
 	'lemon-grove'   => 'Lemon Grove',
+	'ramona'        => 'Ramona',
+	'poway'         => 'Poway',
+	'pine-valley'   => 'Pine Valley',
 );
 
 get_header();

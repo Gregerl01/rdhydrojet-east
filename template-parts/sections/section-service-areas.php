@@ -38,7 +38,7 @@ for ( $i = 1; $i <= 6; $i++ ) {
 }
 
 // Additional areas from textarea.
-$additional_raw   = get_theme_mod( 'bmg_additional_areas', "Spring Valley\nLemon Grove\nRancho San Diego\nAlpine\nSan Carlos\nDel Cerro\nCollege Area\nBostonia\nFletcher Hills\nCasa de Oro\nJamul\nMount Helix" );
+$additional_raw   = get_theme_mod( 'bmg_additional_areas', "Spring Valley\nLemon Grove\nRancho San Diego\nAlpine\nSan Carlos\nDel Cerro\nCollege Area\nRamona\nPoway\nPine Valley\nBostonia\nFletcher Hills\nCasa de Oro\nJamul\nMount Helix" );
 $additional_areas = array_filter( array_map( 'trim', explode( "\n", $additional_raw ) ) );
 ?>
 

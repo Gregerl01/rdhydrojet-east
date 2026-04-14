@@ -167,7 +167,7 @@ $cities = array(
 			array( 'slug' => 'plumber-in-santee', 'name' => 'Santee' ),
 			array( 'slug' => 'plumber-in-el-cajon', 'name' => 'El Cajon' ),
 			array( 'slug' => 'plumber-in-alpine', 'name' => 'Alpine' ),
-			array( 'slug' => 'ramona', 'name' => 'Ramona' ),
+			array( 'slug' => 'plumber-in-ramona', 'name' => 'Ramona' ),
 		),
 	),
 
@@ -319,6 +319,7 @@ $cities = array(
 			array( 'slug' => 'plumber-in-lakeside', 'name' => 'Lakeside' ),
 			array( 'slug' => 'plumber-in-el-cajon', 'name' => 'El Cajon' ),
 			array( 'slug' => 'plumber-in-rancho-san-diego', 'name' => 'Rancho San Diego' ),
+			array( 'slug' => 'plumber-in-pine-valley', 'name' => 'Pine Valley' ),
 		),
 	),
 
@@ -474,10 +475,124 @@ $cities = array(
 		),
 	),
 
+	'plumber-in-ramona' => array(
+		'name'        => 'Ramona',
+		'h1'          => 'Plumber in Ramona — Licensed Plumbing & Hydro Jetting',
+		'subtitle'    => 'Serving Ramona\'s ranch properties and rural homes. Septic, well water, and full-service plumbing.',
+		'intro'       => '<p>Ramona is a rural community northeast of San Diego where large-lot properties, equestrian estates, and agricultural land are the norm. Many homes here are on private wells and septic systems, making our C42 Sanitation license especially valuable. Plumbing runs tend to be longer on Ramona properties, and the area\'s hard well water causes accelerated sediment buildup in water heaters and mineral scale in supply lines.</p><p>We serve Ramona homeowners along Main Street, San Vicente Road, and Dye Road with the same diagnostic-first approach we bring to every East County job — camera inspections before hydro jetting, written estimates before work, and code-compliant results.</p>',
+		'map_query'   => 'Ramona, CA',
+		'testimonial' => array(
+			'quote'    => 'Tankless water heater install took one day and the quote was exactly what they charged. Professional crew, respected the house, cleaned everything up. Highly recommend.',
+			'name'     => 'Sandra Ortiz',
+			'location' => 'Ramona',
+			'service'  => 'Water Heater',
+		),
+		'faqs'        => array(
+			array(
+				'q' => 'Do you service septic systems on Ramona ranch properties?',
+				'a' => 'Yes. We hold a C42 Sanitation license and regularly service septic systems on Ramona\'s larger properties. We handle inspections, diagnostics, tank pumping, repairs, and full system replacements.',
+			),
+			array(
+				'q' => 'Can you help with well water treatment in Ramona?',
+				'a' => 'Absolutely. Ramona\'s well water tends to be hard and mineral-heavy. We install water softeners, whole-house filtration systems, and sediment filters to protect your plumbing and appliances.',
+			),
+			array(
+				'q' => 'How do you maintain longer pipe runs on Ramona properties?',
+				'a' => 'Large Ramona lots often have 100+ foot sewer and water lines. We use hydro jetting to clear the full length and camera inspection to identify problem areas — root intrusion, bellies, and joint separations — before they cause failures.',
+			),
+			array(
+				'q' => 'Why does my water heater fail faster in Ramona?',
+				'a' => 'Ramona\'s hard well water accelerates sediment buildup inside tank water heaters, reducing efficiency and shortening lifespan. Annual flushing helps, and tankless units with descaling maintenance are a better long-term option.',
+			),
+		),
+		'nearby'      => array(
+			array( 'slug' => 'plumber-in-lakeside', 'name' => 'Lakeside' ),
+			array( 'slug' => 'plumber-in-alpine', 'name' => 'Alpine' ),
+			array( 'slug' => 'plumber-in-poway', 'name' => 'Poway' ),
+			array( 'slug' => 'julian', 'name' => 'Julian' ),
+		),
+	),
+
+	'plumber-in-poway' => array(
+		'name'        => 'Poway',
+		'h1'          => 'Plumber in Poway — Licensed Plumbing & Hydro Jetting',
+		'subtitle'    => 'The City in the Country deserves country-strong plumbing. Licensed service for Poway homes and businesses.',
+		'intro'       => '<p>Poway blends suburban neighborhoods with semi-rural properties on its eastern edge, creating two distinct plumbing profiles. Homes in the established neighborhoods near Poway Road, Twin Peaks Road, and Espola Road were primarily built in the 1970s–80s and are now hitting the age where sewer line deterioration, water heater failure, and supply pipe corrosion become common.</p><p>The larger properties in eastern Poway toward Ramona often rely on private wells and septic systems. We handle both — from standard residential drain cleaning and water heater replacement in the suburban core to septic inspections and well water plumbing on the rural fringe.</p>',
+		'map_query'   => 'Poway, CA',
+		'testimonial' => array(
+			'quote'    => 'We\'d had three plumbers out in two years for the same recurring clog. RD ran the camera, found grease buildup the others missed, and hydro-jetted the line. No issues since.',
+			'name'     => 'Karen Walsh',
+			'location' => 'Poway',
+			'service'  => 'Hydro Jetting',
+		),
+		'faqs'        => array(
+			array(
+				'q' => 'What plumbing issues are common in 70s-80s Poway homes?',
+				'a' => 'Homes from this era often have aging copper or galvanized supply pipes, cast iron drain lines, and original water heaters that are well past their lifespan. Sewer line corrosion and slab leaks are the most common calls we get in established Poway neighborhoods.',
+			),
+			array(
+				'q' => 'Do you handle septic systems in eastern Poway?',
+				'a' => 'Yes. We\'re C42 Sanitation licensed for septic work. Properties on Poway\'s rural eastern edge often use septic systems that need regular inspection and maintenance. We handle the full range — inspections, pump-outs, repairs, and replacements.',
+			),
+			array(
+				'q' => 'When should I replace my water heater in Poway?',
+				'a' => 'Tank water heaters typically last 10-15 years. If your Poway home was built in the 70s-80s, you\'re likely on the second or third unit. We assess condition and recommend repair vs. replacement — and can upgrade you to a tankless system for better efficiency.',
+			),
+			array(
+				'q' => 'Do you serve commercial properties on Poway Road?',
+				'a' => 'Yes. We handle commercial plumbing along Poway Road and throughout the business district — hydro jetting for grease lines, drain maintenance, water heater service, and emergency response for restaurants, retail, and office properties.',
+			),
+		),
+		'nearby'      => array(
+			array( 'slug' => 'plumber-in-ramona', 'name' => 'Ramona' ),
+			array( 'slug' => 'plumber-in-santee', 'name' => 'Santee' ),
+			array( 'slug' => 'plumber-in-san-carlos', 'name' => 'San Carlos' ),
+			array( 'slug' => 'rancho-bernardo', 'name' => 'Rancho Bernardo' ),
+		),
+	),
+
+	'plumber-in-pine-valley' => array(
+		'name'        => 'Pine Valley',
+		'h1'          => 'Plumber in Pine Valley — Licensed Plumbing & Hydro Jetting',
+		'subtitle'    => 'Mountain plumbing for Pine Valley and the backcountry. Septic, freeze protection, and emergency service.',
+		'intro'       => '<p>Pine Valley sits at over 3,700 feet elevation in the Laguna Mountains, and its plumbing needs are different from anywhere else in East County. Freezing temperatures in winter put exposed pipes at serious risk, and many properties rely entirely on septic systems and well water. Our C42 Sanitation license covers the septic work that mountain properties require, and we understand the freeze protection measures — pipe insulation, heat tape, and proper winterization — that Pine Valley homes need.</p><p>We also serve the surrounding backcountry communities including Guatay and Descanso. When a pipe bursts at 4,000 feet on a January night, we answer the phone.</p>',
+		'map_query'   => 'Pine Valley, CA',
+		'testimonial' => array(
+			'quote'    => 'Tankless water heater install took one day and the quote was exactly what they charged. Professional crew, respected the house, cleaned everything up. Highly recommend.',
+			'name'     => 'Sandra Ortiz',
+			'location' => 'Pine Valley',
+			'service'  => 'Water Heater',
+		),
+		'faqs'        => array(
+			array(
+				'q' => 'Can you protect my Pine Valley pipes from freezing?',
+				'a' => 'Yes. Pine Valley\'s elevation means sub-freezing winter temperatures. We insulate exposed pipes, install heat tape on vulnerable runs, and can reroute pipes away from exterior walls and unheated crawlspaces to prevent freeze damage.',
+			),
+			array(
+				'q' => 'Do you service septic systems in Pine Valley?',
+				'a' => 'Absolutely. We\'re C42 Sanitation licensed — one of the few East County plumbers certified for septic work. We handle inspections, diagnostics, pump coordination, repairs, and full system replacements at elevation.',
+			),
+			array(
+				'q' => 'How fast can an emergency plumber reach Pine Valley?',
+				'a' => 'Pine Valley is at the outer edge of our service area. Emergency response is typically within 90-120 minutes depending on conditions. For winter pipe bursts, we prioritize mountain calls because we know the damage compounds fast.',
+			),
+			array(
+				'q' => 'Do you serve Guatay and Descanso too?',
+				'a' => 'Yes. We serve the broader backcountry area including Guatay, Descanso, and the surrounding Laguna Mountain communities. The same freeze protection and septic expertise applies throughout.',
+			),
+		),
+		'nearby'      => array(
+			array( 'slug' => 'plumber-in-alpine', 'name' => 'Alpine' ),
+			array( 'slug' => 'plumber-in-ramona', 'name' => 'Ramona' ),
+			array( 'slug' => 'descanso', 'name' => 'Descanso' ),
+			array( 'slug' => 'julian', 'name' => 'Julian' ),
+		),
+	),
+
 );
 
 // Slugs that do NOT have their own service area page (render as span, not link).
-$no_page_slugs = array( 'ramona', 'north-park' );
+$no_page_slugs = array( 'north-park', 'rancho-bernardo', 'julian', 'descanso' );
 
 // =========================================================================
 // Resolve current city

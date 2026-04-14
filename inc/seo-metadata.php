@@ -124,6 +124,18 @@ function bmg_seo_page_data() {
 			'title'       => __( 'Plumber in East San Diego, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
 			'description' => __( 'Licensed plumber in East San Diego. Hydro jetting, drain repair, repiping, emergency service. Serving City Heights, Oak Park and East San Diego. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
 		),
+		'page-service-area:plumber-in-ramona' => array(
+			'title'       => __( 'Plumber in Ramona, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in Ramona. Septic systems, well water plumbing, hydro jetting, emergency service. Serving Ramona and East San Diego County. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
+		'page-service-area:plumber-in-poway' => array(
+			'title'       => __( 'Plumber in Poway, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in Poway. Hydro jetting, drain repair, water heaters, septic service. Serving Poway and East San Diego County. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
+		'page-service-area:plumber-in-pine-valley' => array(
+			'title'       => __( 'Plumber in Pine Valley, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in Pine Valley. Freeze protection, septic systems, well water plumbing, emergency service. Serving Pine Valley and backcountry. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
 		'page-enroll'   => array(
 			'title'       => __( 'Enroll — [Business Name]', 'bmg-theme' ),
 			'description' => __( '[Enrollment page meta description — describe the enrollment process.]', 'bmg-theme' ),

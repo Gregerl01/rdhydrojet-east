@@ -81,12 +81,12 @@ $footer_tagline = get_theme_mod( 'bmg_footer_tagline', "East San Diego County's 
 				<div class="col-lg-3 col-md-6">
 					<h4 class="site-footer__title">Service Areas</h4>
 					<ul class="site-footer__links list-unstyled">
-						<li><a href="#service-areas">El Cajon</a></li>
-						<li><a href="#service-areas">La Mesa</a></li>
-						<li><a href="#service-areas">Santee</a></li>
-						<li><a href="#service-areas">Lakeside</a></li>
-						<li><a href="#service-areas">Spring Valley</a></li>
-						<li><a href="#service-areas">Rancho San Diego</a></li>
+						<li><a href="<?php echo esc_url( home_url( '/plumber-in-el-cajon/' ) ); ?>">El Cajon</a></li>
+						<li><a href="<?php echo esc_url( home_url( '/plumber-in-la-mesa/' ) ); ?>">La Mesa</a></li>
+						<li><a href="<?php echo esc_url( home_url( '/plumber-in-santee/' ) ); ?>">Santee</a></li>
+						<li><a href="<?php echo esc_url( home_url( '/plumber-in-lakeside/' ) ); ?>">Lakeside</a></li>
+						<li><a href="<?php echo esc_url( home_url( '/plumber-in-ramona/' ) ); ?>">Ramona</a></li>
+						<li><a href="<?php echo esc_url( home_url( '/plumber-in-poway/' ) ); ?>">Poway</a></li>
 					</ul>
 				</div>
 
