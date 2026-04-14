@@ -75,6 +75,55 @@ function bmg_seo_page_data() {
 			'title'       => __( 'New Construction Plumbing in East San Diego County | RD Hydrojet Plumbing', 'bmg-theme' ),
 			'description' => __( 'Licensed new construction plumbing for East San Diego County builders and homeowners. Rough-in, top-out, trim, and inspection. CA CSLB #1076642. Call (619) 571-1777.', 'bmg-theme' ),
 		),
+		// Service area pages — keyed by slug (basename page-service-area + slug).
+		'page-service-area:plumber-in-el-cajon' => array(
+			'title'       => __( 'Plumber in El Cajon, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in El Cajon. Hydro jetting, drain repair, water heaters, emergency service. Serving El Cajon and East San Diego County. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
+		'page-service-area:plumber-in-la-mesa' => array(
+			'title'       => __( 'Plumber in La Mesa, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in La Mesa. Hydro jetting, drain repair, water heaters, emergency service. Serving La Mesa and East San Diego County. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
+		'page-service-area:plumber-in-santee' => array(
+			'title'       => __( 'Plumber in Santee, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in Santee. Hydro jetting, drain repair, water heaters, emergency service. Serving Santee and East San Diego County. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
+		'page-service-area:plumber-in-lakeside' => array(
+			'title'       => __( 'Plumber in Lakeside, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in Lakeside. Hydro jetting, drain repair, water heaters, septic service. Serving Lakeside and East San Diego County. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
+		'page-service-area:plumber-in-spring-valley' => array(
+			'title'       => __( 'Plumber in Spring Valley, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in Spring Valley. Hydro jetting, drain repair, water heaters, emergency service. Serving Spring Valley and East San Diego County. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
+		'page-service-area:plumber-in-lemon-grove' => array(
+			'title'       => __( 'Plumber in Lemon Grove, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in Lemon Grove. Hydro jetting, drain repair, water heaters, repiping. Serving Lemon Grove and East San Diego County. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
+		'page-service-area:plumber-in-rancho-san-diego' => array(
+			'title'       => __( 'Plumber in Rancho San Diego, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in Rancho San Diego. Hydro jetting, drain repair, water heaters, leak detection. Serving Rancho San Diego and East San Diego County. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
+		'page-service-area:plumber-in-alpine' => array(
+			'title'       => __( 'Plumber in Alpine, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in Alpine. Hydro jetting, septic service, well water plumbing, emergency service. Serving Alpine and East San Diego County. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
+		'page-service-area:plumber-in-san-carlos' => array(
+			'title'       => __( 'Plumber in San Carlos, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in San Carlos. Hydro jetting, drain repair, water heaters, repiping. Serving San Carlos and East San Diego County. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
+		'page-service-area:plumber-in-del-cerro' => array(
+			'title'       => __( 'Plumber in Del Cerro, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in Del Cerro. Leak detection, drain repair, hillside drainage, emergency service. Serving Del Cerro and East San Diego County. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
+		'page-service-area:plumber-in-college-area' => array(
+			'title'       => __( 'Plumber in College Area, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in College Area near SDSU. Hydro jetting, drain repair, water heaters, landlord services. Serving College Area and East San Diego County. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
+		'page-service-area:plumber-in-east-san-diego' => array(
+			'title'       => __( 'Plumber in East San Diego, CA | RD Hydrojet Plumbing | Licensed &amp; Insured', 'bmg-theme' ),
+			'description' => __( 'Licensed plumber in East San Diego. Hydro jetting, drain repair, repiping, emergency service. Serving City Heights, Oak Park and East San Diego. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
+		),
 		'page-enroll'   => array(
 			'title'       => __( 'Enroll — [Business Name]', 'bmg-theme' ),
 			'description' => __( '[Enrollment page meta description — describe the enrollment process.]', 'bmg-theme' ),
@@ -114,8 +163,8 @@ function bmg_get_current_seo_key() {
 			// Template slug is like "page-templates/page-about.php".
 			$basename = basename( $template, '.php' );
 
-			// Service detail pages share a template — key by slug for per-page SEO.
-			if ( 'page-service-detail' === $basename ) {
+			// Shared templates — key by slug for per-page SEO.
+			if ( in_array( $basename, array( 'page-service-detail', 'page-service-area' ), true ) ) {
 				global $post;
 				if ( isset( $post->post_name ) && $post->post_name ) {
 					$composite = $basename . ':' . $post->post_name;

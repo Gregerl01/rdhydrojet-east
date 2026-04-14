@@ -4081,3 +4081,149 @@ select option {
     }
   }
 }
+
+// ==========================================================================
+// Service Area City Pages
+// ==========================================================================
+
+// Section 2: City Intro
+.section-area-intro {
+  background: $brand-white;
+  padding: $section-padding-desktop 0;
+
+  @media (max-width: 767.98px) {
+    padding: $section-padding-mobile 0;
+  }
+
+  &__text {
+    font-size: 1.0625rem;
+    color: $text-secondary;
+    line-height: 1.7;
+
+    p {
+      margin-bottom: $space-md;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__map-placeholder {
+    aspect-ratio: 4 / 3;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    background: $brand-surface;
+    border: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $space-sm;
+    color: rgba($text-secondary, 0.4);
+  }
+
+  &__map-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $text-secondary;
+  }
+}
+
+// Section 3: Services on area pages
+.section-area-services {
+  background: $brand-surface;
+  padding: $section-padding-desktop 0;
+
+  @media (max-width: 767.98px) {
+    padding: $section-padding-mobile 0;
+  }
+}
+
+// Section 5: Featured Testimonial
+.section-area-testimonial {
+  background: $brand-surface;
+  padding: $section-padding-desktop 0;
+
+  @media (max-width: 767.98px) {
+    padding: $section-padding-mobile 0;
+  }
+
+  &__card {
+    background: $brand-white;
+    border-radius: $radius-lg;
+    border: 1px solid $border-color;
+    border-left: 3px solid $brand-primary;
+    padding: $space-xl;
+    box-shadow: $shadow-sm;
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    color: $brand-accent;
+    margin-bottom: $space-md;
+  }
+
+  &__quote {
+    font-size: 1.125rem;
+    color: $text-primary;
+    line-height: 1.8;
+    border: none;
+    padding: 0;
+    margin: 0 0 $space-lg;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__author {
+    margin-bottom: $space-xs;
+  }
+
+  &__name {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $text-primary;
+  }
+
+  &__location {
+    font-size: 0.875rem;
+    color: $text-secondary;
+  }
+
+  &__service {
+    display: inline-block;
+    background: rgba($brand-primary, 0.08);
+    color: $brand-primary;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: $radius-full;
+    margin-top: $space-xs;
+  }
+}
+
+// Section 7: Neighboring Areas
+.section-area-nearby {
+  background: $brand-white;
+  padding: $space-xl 0;
+
+  @media (max-width: 767.98px) {
+    padding: $space-lg 0;
+  }
+
+  // Make pills clickable
+  a.section-service-areas__pill {
+    text-decoration: none;
+    transition: background $transition-fast, border-color $transition-fast, color $transition-fast;
+
+    &:hover {
+      background: $brand-primary;
+      border-color: $brand-primary;
+      color: $brand-white;
+    }
+  }
+}
