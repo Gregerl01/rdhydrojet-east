@@ -19861,24 +19861,6 @@ select option {
   border: 1px solid #E5E5E5;
 }
 
-.section-contact-trust {
-  background: #FFFFFF;
-  padding: 3rem 0;
-  border-top: 1px solid #E5E5E5;
-}
-.section-contact-trust__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  color: #D7262C;
-}
-.section-contact-trust__item span {
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: #111111;
-}
-
 .section-area-intro {
   background: #FFFFFF;
   padding: 96px 0;
