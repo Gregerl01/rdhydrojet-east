@@ -3548,15 +3548,17 @@ select option {
   padding: $space-lg;
   background: $brand-white;
   border: 1px solid $border-color;
-  border-radius: 12px;
+  border-bottom: 3px solid transparent;
+  border-radius: $radius-lg;
   color: $text-primary;
   text-decoration: none;
   height: 100%;
   overflow: hidden;
   transition:
     box-shadow $transition-base,
-    transform $transition-fast,
-    border-color $transition-base;
+    transform $transition-base,
+    border-color $transition-base,
+    border-bottom-color $transition-base;
 
   // Red left-border accent that appears on hover
   &::before {
@@ -3574,10 +3576,11 @@ select option {
 
   @media (hover: hover) {
     &:hover {
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: $shadow-md;
       transform: translateY($hover-lift);
       color: $text-primary;
       border-color: rgba($brand-primary, 0.25);
+      border-bottom-color: $brand-primary;
 
       &::before { transform: scaleY(1); }
 
@@ -3601,31 +3604,36 @@ select option {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 64px;
-    height: 64px;
-    border-radius: $radius-md;
-    background: rgba($brand-primary, 0.08);
+    width: 56px;
+    height: 56px;
+    border-radius: $radius-lg;
+    background: rgba($brand-primary, 0.12);
     color: $brand-primary;
-    margin-bottom: $space-md;
+    margin-bottom: $space-sm;
+
+    svg {
+      width: 28px;
+      height: 28px;
+    }
   }
 
   &-title {
-    font-size: 1.375rem;
-    font-weight: 800;
+    font-size: 1.125rem;
+    font-weight: 700;
     color: $text-primary;
-    margin-bottom: $space-sm;
+    margin-bottom: $space-xs;
     line-height: 1.25;
   }
 
   &-desc {
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     color: $text-secondary;
-    line-height: 1.65;
-    margin-bottom: $space-md;
+    line-height: 1.6;
+    margin-bottom: $space-sm;
   }
 
   &-bullets {
-    margin: 0 0 $space-md;
+    margin: 0 0 $space-sm;
 
     li {
       position: relative;
@@ -3633,7 +3641,7 @@ select option {
       align-items: flex-start;
       gap: $space-xs;
       padding: 4px 0;
-      font-size: 0.875rem;
+      font-size: 0.8125rem;
       color: $text-secondary;
       line-height: 1.5;
 
@@ -3650,15 +3658,15 @@ select option {
     align-items: center;
     gap: 6px;
     color: $brand-primary;
-    font-weight: 700;
-    font-size: 0.9375rem;
+    font-weight: 600;
+    font-size: 0.875rem;
     transition: gap $transition-base, color $transition-base;
   }
 }
 
 // Section 6: Service Areas Strip (inline-text link row)
 .section-services-areas-strip {
-  background: #F5F5F5;
+  background: $brand-surface;
   padding: $space-lg 0;
 
   &__text {

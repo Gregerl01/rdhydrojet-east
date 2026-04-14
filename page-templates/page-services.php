@@ -202,7 +202,7 @@ get_header();
 			<h2 class="visually-hidden"><?php esc_html_e( 'Our Services', 'bmg-theme' ); ?></h2>
 			<div class="row g-4 bmg-reveal-stagger">
 				<?php foreach ( $services as $service ) : ?>
-					<div class="col-lg-6 bmg-reveal">
+					<div class="col-md-6 col-lg-4 bmg-reveal">
 						<a
 							href="<?php echo esc_url( home_url( $service['link'] ) ); ?>"
 							class="section-services__card"
