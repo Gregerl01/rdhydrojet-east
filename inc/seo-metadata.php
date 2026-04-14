@@ -136,6 +136,10 @@ function bmg_seo_page_data() {
 			'title'       => __( 'Plumber in Pine Valley, CA | RD Hydrojet Plumbing', 'bmg-theme' ),
 			'description' => __( 'Licensed plumber in Pine Valley. Freeze protection, septic systems, well water plumbing, emergency service. Serving Pine Valley and backcountry. CA #1076642. Call (619) 571-1777.', 'bmg-theme' ),
 		),
+		'home'          => array(
+			'title'       => __( 'Plumbing Blog | Tips & News | RD Hydrojet Plumbing', 'bmg-theme' ),
+			'description' => __( 'Plumbing tips, maintenance advice, and local news for East San Diego County homeowners. From the licensed pros at RD Hydrojet Plumbing.', 'bmg-theme' ),
+		),
 		'page-enroll'   => array(
 			'title'       => __( 'Enroll | RD Hydrojet Plumbing', 'bmg-theme' ),
 			'description' => __( 'Enroll in a plumbing maintenance plan with RD Hydrojet Plumbing. Serving East San Diego County.', 'bmg-theme' ),
@@ -167,6 +171,11 @@ function bmg_seo_page_data() {
 function bmg_get_current_seo_key() {
 	if ( is_front_page() ) {
 		return 'front-page';
+	}
+
+	// Blog archive (Posts Page).
+	if ( is_home() ) {
+		return 'home';
 	}
 
 	if ( is_page() ) {

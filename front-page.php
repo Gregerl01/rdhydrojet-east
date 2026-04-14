@@ -36,7 +36,10 @@ get_header();
 	// Section 7: Service Areas — East County cities + pills.
 	get_template_part( 'template-parts/sections/section', 'service-areas' );
 
-	// Section 8: FAQ — 8-question accordion.
+	// Section 8: Blog — 3 most recent posts.
+	get_template_part( 'template-parts/sections/section', 'blog' );
+
+	// Section 9: FAQ — 8-question accordion.
 	get_template_part( 'template-parts/sections/section', 'faq' );
 
 	// Section 9: Final CTA — dark bg, form left, contact cards right.

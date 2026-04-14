@@ -150,6 +150,7 @@ $bmg_includes = array(
 	'/customizer-emergency.php',     // Emergency section (heading, 3 cards, CTA).
 	'/dark-mode.php',                // Dark mode FOUC prevention and data-bs-theme attribute.
 	'/seo-metadata.php',             // SEO title tags and meta descriptions.
+	'/starter-posts.php',            // One-time starter blog post creation.
 );
 
 foreach ( $bmg_includes as $file ) {
