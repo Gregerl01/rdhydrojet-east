@@ -788,6 +788,9 @@ get_header();
 		</div>
 	</section>
 
+	<!-- Section 3b: City Service+City Combo Links -->
+	<?php get_template_part( 'template-parts/sections/section-city-services' ); ?>
+
 	<!-- Section 4: Why Choose Us -->
 	<section class="section-values section-dark">
 		<div class="container">
