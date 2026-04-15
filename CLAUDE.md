@@ -14,10 +14,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Local Dev:** Local by Flywheel — `rd-hydrojet-east.local`
 - **Runtime:** PHP 8.1, MySQL 8.0, Nginx 1.26
 - **Node:** >= 18, npm >= 8.6.0
-- **CI/CD:** GitHub Actions (SSH + rsync deploy to Hostinger)
+- **CI/CD:** GitHub Actions (SSH + rsync deploy to Hostinger) — `.github/workflows/deploy-production.yml`
+- **Production:** rdhydrojeteast.com (main branch, auto-deploy with manual approval gate)
+- **Deploy safety:** 6 layers — path validation, remote verify, auto-backup, dry run, manual approval, health check
 - **Default Branch:** `dev`
 - **Text Domain:** `bmg-theme` (do not rename)
-- **Repo:** TBD
 
 ---
 

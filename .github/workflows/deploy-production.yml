@@ -1,0 +1,156 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  preflight:
+    name: Pre-flight Safety Checks
+    runs-on: ubuntu-latest
+    outputs:
+      path_valid: ${{ steps.validate.outputs.valid }}
+
+    steps:
+      - name: Validate deploy path
+        id: validate
+        run: |
+          DEPLOY_PATH="${{ secrets.PROD_DEPLOY_PATH }}"
+          if [ -z "$DEPLOY_PATH" ]; then
+            echo "::error::PROD_DEPLOY_PATH is empty. Aborting."
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+          if [[ "$DEPLOY_PATH" != */ ]]; then
+            echo "::error::PROD_DEPLOY_PATH must end with a trailing slash. Got: $DEPLOY_PATH"
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+          if [[ "$DEPLOY_PATH" != *"wp-content/themes/"* ]]; then
+            echo "::error::PROD_DEPLOY_PATH does not contain 'wp-content/themes/'. This deploy targets THEME ONLY. Path: $DEPLOY_PATH"
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+          DEPTH=$(echo "$DEPLOY_PATH" | tr '/' '\n' | grep -c .)
+          if [ "$DEPTH" -lt 6 ]; then
+            echo "::error::PROD_DEPLOY_PATH is too shallow ($DEPTH levels). Expected 6+. Path: $DEPLOY_PATH"
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+          echo "valid=true" >> $GITHUB_OUTPUT
+          echo "Deploy path validated: $DEPLOY_PATH (depth: $DEPTH)"
+
+  approve:
+    name: Awaiting Production Approval
+    needs: preflight
+    if: needs.preflight.outputs.path_valid == 'true'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Approval granted
+        run: echo "Production deployment approved"
+
+  deploy:
+    name: Deploy to Production
+    needs: approve
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Verify remote path
+        run: |
+          RESULT=$(ssh -i ~/.ssh/deploy_key -p ${{ secrets.SSH_PORT }} \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+            "test -d '${{ secrets.PROD_DEPLOY_PATH }}' && test -f '${{ secrets.PROD_DEPLOY_PATH }}style.css' && echo 'VALID' || echo 'MISSING'")
+          echo "Remote path check: $RESULT"
+          if [ "$RESULT" = "MISSING" ]; then
+            echo "::warning::Remote theme directory not found. This may be a first deploy."
+          fi
+
+      - name: Backup current theme on server
+        continue-on-error: true
+        run: |
+          TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+          ssh -i ~/.ssh/deploy_key -p ${{ secrets.SSH_PORT }} \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+            "if [ -d '${{ secrets.PROD_DEPLOY_PATH }}' ] && [ -f '${{ secrets.PROD_DEPLOY_PATH }}style.css' ]; then \
+              BACKUP_DIR=\$(dirname '${{ secrets.PROD_DEPLOY_PATH }}')/.theme-backups; \
+              mkdir -p \$BACKUP_DIR; \
+              THEME_NAME=\$(basename '${{ secrets.PROD_DEPLOY_PATH }}'); \
+              cp -r '${{ secrets.PROD_DEPLOY_PATH }}' \"\$BACKUP_DIR/\${THEME_NAME}_${TIMESTAMP}\"; \
+              echo \"Backup created: \$BACKUP_DIR/\${THEME_NAME}_${TIMESTAMP}\"; \
+              ls -dt \$BACKUP_DIR/\${THEME_NAME}_* 2>/dev/null | tail -n +4 | xargs rm -rf 2>/dev/null; \
+              echo 'Old backups cleaned (keeping last 3)'; \
+            else \
+              echo 'No existing theme to backup (first deploy)'; \
+            fi"
+
+      - name: Rsync dry run
+        run: |
+          echo "=== DRY RUN — files that WOULD be changed ==="
+          rsync -avz --delete --dry-run \
+            --exclude='node_modules/' \
+            --exclude='src/' \
+            --exclude='.env' \
+            --exclude='*.log' \
+            --exclude='.DS_Store' \
+            --exclude='Thumbs.db' \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            -e "ssh -i ~/.ssh/deploy_key -p ${{ secrets.SSH_PORT }}" \
+            ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.PROD_DEPLOY_PATH }} \
+            2>&1 | tail -50
+          echo "=== END DRY RUN ==="
+
+      - name: Deploy via rsync
+        run: |
+          rsync -avz --delete \
+            --exclude='node_modules/' \
+            --exclude='src/' \
+            --exclude='.env' \
+            --exclude='*.log' \
+            --exclude='.DS_Store' \
+            --exclude='Thumbs.db' \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            -e "ssh -i ~/.ssh/deploy_key -p ${{ secrets.SSH_PORT }}" \
+            ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.PROD_DEPLOY_PATH }}
+
+      - name: Post-deploy health check
+        continue-on-error: true
+        run: |
+          DOMAIN=$(echo "${{ secrets.PROD_DEPLOY_PATH }}" | grep -oP 'domains/\K[^/]+')
+          if [ -n "$DOMAIN" ]; then
+            echo "Checking https://$DOMAIN ..."
+            HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 "https://$DOMAIN" || echo "000")
+            if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 400 ]; then
+              echo "Health check PASSED (HTTP $HTTP_CODE)"
+            else
+              echo "::warning::Health check returned HTTP $HTTP_CODE — verify the site manually"
+            fi
+          else
+            echo "Could not extract domain from deploy path — skipping health check"
+          fi
+
+      - name: Clear LiteSpeed cache
+        continue-on-error: true
+        run: |
+          ssh -i ~/.ssh/deploy_key -p ${{ secrets.SSH_PORT }} \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+            "cd ${{ secrets.PROD_DEPLOY_PATH }}../../../ && wp litespeed-purge all 2>/dev/null || true"
+
+      - name: Deployment summary
+        run: |
+          echo "Deployed commit ${{ github.sha }} to PRODUCTION"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Time: $(date -u)"
