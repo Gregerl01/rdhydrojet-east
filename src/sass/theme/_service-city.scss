@@ -1,0 +1,240 @@
+// ==========================================================================
+// Service + City Combo Pages
+// ==========================================================================
+
+.svc-city-hero {
+  position: relative;
+  background: $brand-dark;
+  padding: $space-3xl 0 $space-2xl;
+  overflow: hidden;
+
+  @media (max-width: 767.98px) {
+    padding: $space-xl 0;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, $brand-dark 0%, $brand-dark-lighter 100%);
+    z-index: 0;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    max-width: 880px;
+  }
+
+  &__breadcrumb {
+    font-size: 0.8125rem;
+    margin-bottom: $space-md;
+
+    a {
+      color: rgba($text-on-dark, 0.6);
+      text-decoration: none;
+      transition: color $transition-fast;
+
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+
+    span {
+      color: rgba($text-on-dark, 0.4);
+
+      &:last-child {
+        color: rgba($text-on-dark, 0.8);
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: $text-on-dark;
+    line-height: 1.1;
+    margin-bottom: $space-sm;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+    @media (min-width: 768px) {
+      font-size: 3.25rem;
+    }
+  }
+
+  &__subhead {
+    font-size: 1.125rem;
+    color: rgba($text-on-dark, 0.8);
+    line-height: 1.6;
+    margin-bottom: $space-lg;
+    max-width: 640px;
+  }
+
+  &__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-sm;
+    margin-bottom: $space-lg;
+  }
+
+  &__trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-sm;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: rgba($text-on-dark, 0.7);
+
+    span {
+      display: inline-flex;
+      align-items: center;
+
+      &::before {
+        content: '✓';
+        margin-right: 6px;
+        color: $trust-green;
+      }
+    }
+  }
+}
+
+// Section 2: About
+.svc-city-about {
+  background: $brand-white;
+  padding: $section-padding-desktop 0;
+
+  @media (max-width: 767.98px) {
+    padding: $section-padding-mobile 0;
+  }
+
+  p {
+    font-size: 1.0625rem;
+    color: $text-secondary;
+    line-height: 1.7;
+    margin-bottom: $space-md;
+  }
+
+  &__image-placeholder {
+    aspect-ratio: 1 / 1;
+    border-radius: $radius-lg;
+    background: $brand-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    span {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $brand-white;
+      text-align: center;
+      padding: $space-lg;
+      opacity: 0.6;
+    }
+  }
+}
+
+// Section 3: What's Included
+.svc-city-included {
+  background: $brand-surface;
+  padding: $section-padding-desktop 0;
+
+  @media (max-width: 767.98px) {
+    padding: $section-padding-mobile 0;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    background: $brand-white;
+    border: 1px solid $border-color;
+    border-radius: $radius-lg;
+    padding: $space-md;
+    height: 100%;
+    transition: box-shadow $transition-base;
+
+    &:hover {
+      box-shadow: $shadow-sm;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: $radius-full;
+    background: rgba($brand-primary, 0.1);
+    color: $brand-primary;
+  }
+
+  &__label {
+    font-size: 0.9375rem;
+    color: $text-primary;
+    line-height: 1.4;
+  }
+}
+
+// Section 4: Why Choose Us
+.svc-city-why {
+  background: $brand-white;
+  padding: $section-padding-desktop 0;
+
+  @media (max-width: 767.98px) {
+    padding: $section-padding-mobile 0;
+  }
+
+  &__content {
+    max-width: 860px;
+    margin: 0 auto;
+
+    p {
+      font-size: 1.0625rem;
+      color: $text-secondary;
+      line-height: 1.7;
+      margin-bottom: $space-md;
+    }
+  }
+}
+
+// CTA Bar
+.svc-city-cta {
+  background: $brand-primary;
+  padding: $space-lg 0;
+
+  &__bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: $space-md;
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $brand-white;
+    margin: 0;
+  }
+
+  &__phone {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $brand-white;
+    text-decoration: none;
+    padding: $space-xs $space-md;
+    border: 2px solid $brand-white;
+    border-radius: $radius-md;
+    transition: background $transition-fast, color $transition-fast;
+
+    &:hover {
+      background: $brand-white;
+      color: $brand-primary;
+    }
+  }
+}
