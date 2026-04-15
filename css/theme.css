@@ -19887,23 +19887,16 @@ select option {
 .section-area-intro__text p:last-child {
   margin-bottom: 0;
 }
-.section-area-intro__map-placeholder {
-  aspect-ratio: 4/3;
+.section-area-intro__map {
+  aspect-ratio: 1/1;
   border-radius: 12px;
   overflow: hidden;
-  background: #F7F7F7;
-  border: 1px solid #E5E5E5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  color: rgba(85, 85, 85, 0.4);
+  width: 100%;
 }
-.section-area-intro__map-label {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #555555;
+.section-area-intro__map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .section-area-services {

@@ -727,17 +727,20 @@ get_header();
 					</div>
 				</div>
 				<div class="col-lg-6 bmg-reveal">
-					<!--
-						Google Maps embed placeholder.
-						Replace GOOGLE_MAPS_KEY with an actual Google Maps Embed API key.
-						Example src: https://www.google.com/maps/embed/v1/place?key=GOOGLE_MAPS_KEY&q=<?php echo esc_attr( rawurlencode( $city['map_query'] ) ); ?>
-					-->
-					<div class="section-area-intro__map-placeholder" aria-label="<?php
-						/* translators: %s city name */
-						printf( esc_attr__( 'Map of %s', 'bmg-theme' ), esc_attr( $city['name'] ) );
-					?>">
-						<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-						<span class="section-area-intro__map-label"><?php echo esc_html( $city['name'] ); ?></span>
+					<div class="section-area-intro__map">
+						<iframe
+							src="https://www.google.com/maps?q=<?php echo esc_attr( rawurlencode( $city['map_query'] ) ); ?>&amp;output=embed"
+							width="100%"
+							height="100%"
+							style="border:0;"
+							allowfullscreen=""
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+							title="<?php
+								/* translators: %s city name */
+								printf( esc_attr__( 'Map of %s', 'bmg-theme' ), esc_attr( $city['name'] ) );
+							?>">
+						</iframe>
 					</div>
 				</div>
 			</div>
