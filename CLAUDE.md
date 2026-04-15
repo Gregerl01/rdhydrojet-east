@@ -29,7 +29,7 @@ RD Hydrojet Plumbing's East San Diego County website — a conversion-optimized 
 3. Learn about the company (20+ years experience, licensed/bonded/insured)
 4. Book service via phone call or contact form
 
-The sister site at rdhydrojet.com serves the Inland Empire (Murrieta/Temecula). This site targets East San Diego County: El Cajon, La Mesa, Santee, Lakeside, Spring Valley, Lemon Grove, Rancho San Diego, Alpine, San Carlos, Del Cerro, College Area.
+The sister site at rdhydrojet.com serves the Inland Empire (Murrieta/Temecula). This site targets East San Diego County: El Cajon, La Mesa, Santee, Lakeside, Spring Valley, Lemon Grove, Rancho San Diego, Alpine, San Carlos, Del Cerro, College Area, East San Diego, Ramona, Poway, Pine Valley.
 
 **Design aesthetic:** "Underground Professional" — the visual confidence of infrastructure work meets clean modern service branding. Unified red (#D7262C) as the single action color for CTAs, links, icons, and accents; near-black (#111111) for dark sections, header, and footer; clean white (#FFFFFF) backgrounds. High-contrast red/black/white palette. Plus Jakarta Sans for headlines and body, DM Serif Display for decorative accents, JetBrains Mono for stats and metadata.
 
@@ -104,4 +104,64 @@ All values defined in `src/sass/theme/_theme_variables.scss` — single source o
 | Phone | `bmg_phone` | 619-571-1777 |
 | Email | `bmg_email` | info@rdhydrojeteast.com |
 | Street | `bmg_address_street` | Service Area — East San Diego County |
-| City | `bmg_address_city` | San Diego, CA |
+| City | `bmg_address_city` | East San Diego County, CA |
+
+---
+
+## Current Build Status
+
+### Pages Built
+
+| Page | Template | Notes |
+|------|----------|-------|
+| Homepage | `front-page.php` | 10 sections: Hero, Values, Process, Features, Testimonials, Emergency, Service Areas, Blog, FAQ, CTA |
+| About | `page-templates/page-about.php` | Company story, credentials, stat bar, service areas |
+| Services Hub | `page-templates/page-services.php` | 10 service cards (3-column), process, FAQ, area strip |
+| Service Detail (×10) | `page-templates/page-service-detail.php` | Shared slug-based template |
+| Service Area (×15) | `page-templates/page-service-area.php` | Shared slug-based template, Google Maps embeds |
+| Contact | `page-templates/page-contact.php` | Gravity Forms, sidebar info cards, trust bar |
+| Privacy Policy | `page-templates/page-privacy.php` | noindex |
+| Terms of Use | `page-templates/page-terms.php` | noindex |
+| Blog Archive | `home.php` | 3-column card grid, pagination |
+| Single Post | `single.php` | Hero, featured image, content, CTA box, related posts |
+| 404 | `404.php` | noindex |
+
+### Service Detail Pages (10 slugs)
+`hydro-jetting`, `drain-cleaning`, `water-heater-services`, `leak-detection`, `gas-line-repair`, `toilet-repair`, `emergency-plumbing`, `repiping`, `septic-sanitation`, `new-construction-plumbing`
+
+### Service Area Pages (15 slugs)
+`plumber-in-el-cajon`, `plumber-in-la-mesa`, `plumber-in-santee`, `plumber-in-lakeside`, `plumber-in-spring-valley`, `plumber-in-lemon-grove`, `plumber-in-rancho-san-diego`, `plumber-in-alpine`, `plumber-in-san-carlos`, `plumber-in-del-cerro`, `plumber-in-college-area`, `plumber-in-east-san-diego`, `plumber-in-ramona`, `plumber-in-poway`, `plumber-in-pine-valley`
+
+### Infrastructure
+
+| File | Purpose |
+|------|---------|
+| `header.php` | Utility bar + sticky navbar with scroll hide/show |
+| `footer.php` | 4-column layout (logo, services, areas, contact) + sticky mobile CTA |
+| `inc/services-data.php` | Centralized service data: `bmg_get_services()`, `bmg_get_homepage_services()` |
+| `inc/gravity-forms-setup.php` | Programmatic form creation (Quick Quote + Full Contact) + SMTP notice |
+| `inc/seo-metadata.php` | Title/meta for all pages, defers to Rank Math when active |
+| `inc/starter-posts.php` | One-time blog post + category creation (3 posts) |
+| `src/sass/theme/_sections.scss` | All section, card, form, blog, and Gravity Forms styles |
+| `src/sass/theme/_theme_variables.scss` | Design tokens (colors, spacing, typography, motion) |
+| `src/js/theme.js` | Scroll reveal, sticky header, parallax, smooth scroll, FAQ accordion |
+
+### Plugins (Active)
+
+| Plugin | Purpose |
+|--------|---------|
+| Rank Math SEO | Schema, sitemaps, OG tags, canonical URLs |
+| Gravity Forms | Quick Quote (hero) + Full Contact (CTA, contact page) |
+| Gravity SMTP | Email delivery via SMTP |
+
+---
+
+## Remaining Work
+
+- Deployment to Hostinger (staging + production)
+- Real photography (hero bg, service images, team photos)
+- Google Business Profile link (replace placeholder URL in testimonials)
+- Social media URLs (verify Facebook/Instagram profiles)
+- Gravity SMTP production SMTP credentials
+- Final responsive QA across devices
+- Domain setup and DNS
