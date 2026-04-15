@@ -172,26 +172,37 @@ while ( have_posts() ) :
 							$rel_category   = ! empty( $rel_categories ) ? $rel_categories[0] : null;
 							?>
 							<div class="col-md-6 col-lg-4">
-								<a href="<?php the_permalink(); ?>" class="section-blog__card">
-									<?php if ( has_post_thumbnail() ) : ?>
-										<div class="section-blog__card-img">
-											<?php the_post_thumbnail( 'medium_large', array( 'class' => 'section-blog__card-thumbnail' ) ); ?>
+								<article class="section-blog__card">
+									<a href="<?php the_permalink(); ?>" class="section-blog__card-link">
+										<div class="section-blog__card-image">
+											<?php if ( has_post_thumbnail() ) : ?>
+												<?php the_post_thumbnail( 'medium_large', array(
+													'class'   => 'section-blog__card-img',
+													'loading' => 'lazy',
+												) ); ?>
+											<?php else : ?>
+												<div class="section-blog__card-placeholder">
+													<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+												</div>
+											<?php endif; ?>
 										</div>
-									<?php endif; ?>
-									<div class="section-blog__card-body">
-										<?php if ( $rel_category ) : ?>
-											<span class="section-blog__card-cat">
-												<?php echo esc_html( $rel_category->name ); ?>
+										<div class="section-blog__card-body">
+											<?php if ( $rel_category ) : ?>
+												<span class="section-blog__card-category">
+													<?php echo esc_html( $rel_category->name ); ?>
+												</span>
+											<?php endif; ?>
+											<h3 class="section-blog__card-title">
+												<?php the_title(); ?>
+											</h3>
+											<p class="section-blog__card-excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 18, '...' ) ); ?></p>
+											<span class="section-blog__card-more">
+												<?php esc_html_e( 'Read More', 'bmg-theme' ); ?>
+												<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
 											</span>
-										<?php endif; ?>
-										<h3 class="section-blog__card-title">
-											<?php the_title(); ?>
-										</h3>
-										<time class="section-blog__card-date" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
-											<?php echo esc_html( get_the_date( 'M j, Y' ) ); ?>
-										</time>
-									</div>
-								</a>
+										</div>
+									</a>
+								</article>
 							</div>
 						<?php endwhile; ?>
 					</div>
