@@ -19109,13 +19109,16 @@ select option {
 .section-about-credentials__callout {
   margin-top: 3rem;
   padding: 2rem;
-  background: #F5F5F5;
+  background: #F7F7F7;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   align-items: center;
   text-align: center;
+  color: #555555;
+  font-size: 0.9375rem;
+  line-height: 1.6;
 }
 @media (min-width: 768px) {
   .section-about-credentials__callout {
@@ -19126,6 +19129,8 @@ select option {
 }
 .section-about-credentials__callout strong {
   color: #111111;
+  display: block;
+  margin-bottom: 2px;
 }
 .section-about-credentials__license {
   display: inline-block;

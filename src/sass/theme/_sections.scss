@@ -3229,13 +3229,16 @@ select option {
   &__callout {
     margin-top: $space-xl;
     padding: $space-lg;
-    background: #F5F5F5;
+    background: $brand-surface;
     border-radius: $radius-lg;
     display: flex;
     flex-direction: column;
     gap: $space-md;
     align-items: center;
     text-align: center;
+    color: $text-secondary;
+    font-size: 0.9375rem;
+    line-height: 1.6;
 
     @media (min-width: 768px) {
       flex-direction: row;
@@ -3245,6 +3248,8 @@ select option {
 
     strong {
       color: $text-primary;
+      display: block;
+      margin-bottom: 2px;
     }
   }
 
