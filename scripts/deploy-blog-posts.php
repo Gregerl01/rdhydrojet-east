@@ -339,7 +339,9 @@ foreach ( $posts as $post ) {
 
 	update_post_meta( $post_id, 'rank_math_title',       $post['rank_math_title'] );
 	update_post_meta( $post_id, 'rank_math_description', $post['rank_math_desc'] );
-	update_post_meta( $post_id, 'rank_math_schema_FAQ',  $post['faq_schema'] );
+	// Note: FAQ schema is embedded in post content as structured Q&A.
+	// Do NOT store raw JSON in rank_math_schema_FAQ — it crashes Rank Math.
+	// Use the Rank Math editor UI to add FAQ schema blocks instead.
 
 	echo 'CREATED [' . $post_id . ']: ' . $post['slug'] . "\n";
 }
