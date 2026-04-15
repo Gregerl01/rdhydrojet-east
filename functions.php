@@ -160,3 +160,11 @@ foreach ( $bmg_includes as $file ) {
 		require_once $filepath;
 	}
 }
+
+// Redirect legacy /plumbing-services/ URL to /services/.
+add_action( 'template_redirect', function () {
+	if ( is_404() && isset( $_SERVER['REQUEST_URI'] ) && preg_match( '#^/plumbing-services/?#', $_SERVER['REQUEST_URI'] ) ) {
+		wp_redirect( home_url( '/services/' ), 301 );
+		exit;
+	}
+} );
