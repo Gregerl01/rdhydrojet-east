@@ -148,10 +148,12 @@ $bmg_includes = array(
 	'/customizer-hero.php',          // Hero section Customizer settings.
 	'/customizer-about.php',         // About section Customizer settings.
 	'/customizer-emergency.php',     // Emergency section (heading, 3 cards, CTA).
+	'/customizer-tracking.php',      // Tracking IDs (GTM, GA4, Meta Pixel, Google Ads).
 	'/dark-mode.php',                // Dark mode FOUC prevention and data-bs-theme attribute.
 	'/seo-metadata.php',             // SEO title tags and meta descriptions.
 	'/service-city-data.php',        // Service + city combo page data arrays.
 	'/gravity-forms-setup.php',      // Gravity Forms creation + SMTP notice.
+	'/tracking-loader.php',          // Outputs GTM/GA4/Meta tags + Gravity Forms dataLayer bridge.
 	'/starter-posts.php',            // One-time starter blog post creation.
 );
 
